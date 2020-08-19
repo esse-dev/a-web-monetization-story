@@ -4,7 +4,7 @@ html, body {
     flex-direction: row;
 }
 
-.stage-container {
+.step-container {
     display: grid;
     height: 100vh;
     width: 100vw;
@@ -12,19 +12,19 @@ html, body {
     grid-template-rows: 1fr 1fr;
 }
 
-#step-container {
+.step-info-container {
     grid-column: 1;
     grid-row: 1;
     background: #eee;
 }
 
-#puzzlepiece-container {
+.puzzlepiece-container {
     grid-column: 1;
     grid-row: 2;
     background: #ccc;
 }
 
-#code-container {
+.code-container {
     grid-column: 2;
     grid-row: 1 / 3;
     background: #aaa;
