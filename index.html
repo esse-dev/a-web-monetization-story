@@ -1,7 +1,11 @@
 <link rel="stylesheet" href="index.css">
 <body>
-    <content id="stage-container">
-        <div id="step-container"></div>
+    <content id="step-0" class="stage-container">
+        <div id="step-container">
+            <h2>Step 0</h2>
+            <p>content content content</p>
+            <a href="#step-1">go to step 1</a>
+        </div>
         <div id="puzzlepiece-container">
             <div id="puzzlepiece">
                 <img src="puzzle.svg" width="400px">
@@ -9,4 +13,19 @@
         </div>
         <div id="code-container"></div>
     </content>
+    <content id="step-1" class="stage-container">
+        <div id="step-container">
+            <h2>Step 1</h2>
+            <p>content content content</p>
+            <a href="#step-0">go back to step 0</a>
+        </div>
+        <div id="puzzlepiece-container">
+            <div id="puzzlepiece">
+                <img src="puzzle.svg" width="400px">
+                <img src="puzzle.svg" width="400px">
+            </div>
+        </div>
+        <div id="code-container"></div>
+    </content>
+    <script src="index.js"></script>
 </body>
