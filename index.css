@@ -11,7 +11,7 @@ html, body {
     overflow: hidden;
 }
 
-.step-container {
+.page-container {
     display: grid;
     height: 100vh;
     width: 100vw;
@@ -27,7 +27,7 @@ html, body {
     transition: opacity 0.5s;
 }
 
-.step-avatar-container {
+.page-avatar-container {
     grid-column: 2;
     grid-row: 2 / 3;
 }
@@ -70,20 +70,27 @@ html, body {
     word-wrap: break-word;
     background-color: var(--dark-color);
     color: var(--light-color);
-    font-family: 'Fira Code', monospace;
 }
 
-.step-text {
+.code-font {
+    font-family: 'Fira Code', monospace;
+    color: var(--main-color);
+}
+
+.page-text {
     grid-column: 2;
     grid-row: 3 / 5;
 
     position: relative;
+}
 
+.page-text p {
     background: var(--dark-color);
     color: var(--light-color);
     font-size: 23px;
     border-radius: 35px;
     padding: 40px;
+    margin: 0;
 }
 
 .andra-avatar {

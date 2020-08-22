@@ -6,30 +6,32 @@
     <meta name="monetization" content="$ilp.uphold.com/aEYQyH47UYPY">
 </head>
 <body>
-    <!-- STEP 0 | LANDING SCREEN -->
-    <div id="step=0" class="step-container">
-        <button onclick="transitionToStep(1)" class="animate-in-out">NEXT →</button>
+    <!-- LANDING SCREEN -->
+    <div class="page-container">
+        <button onclick="transitionToPage(1)" class="animate-in-out">NEXT →</button>
     </div>
 
-    <!-- STEP 1 | CHALLENGE 1 -->
-    <div id="step-1" class="step-container">
-        <div class="step-avatar-container animate-in-out">
+    <!-- STEP 1 -->
+    <div class="page-container">
+        <div class="page-avatar-container animate-in-out">
             <img src="andra.png" class="andra-avatar">
         </div>
-        <div class="step-text animate-in-out">
+        <div class="page-text animate-in-out">
             <img src="speech_triangle.svg" class="speech-bubble-stem">
-            All I had to do to enable monetization on my site was add the <span style="color: #FFB566;">Web Monetization meta tag</span>.
-            <br>
-            <br>
-            It’s easy! Drag the meta tag into the <head> tag in the html on the right.
+            <p>
+                All I had to do to enable monetization on my site was add the <span style="color: #FFB566;">Web Monetization meta tag</span>.
+                <br>
+                <br>
+                It’s easy! Drag the <span class="code-font">meta</span> tag into the <span class="code-font">head</span> tag in the html on the right.
+            </p>
         </div>
-        <div id="step-1-puzzlepiece-container" class="puzzlepiece-container animate-in-out">
+        <div id="page-1-puzzlepiece-container" class="puzzlepiece-container animate-in-out">
             <div class="puzzle-piece"></div>
         </div>
         <pre class="code-container animate-in-out">
 &lt;html lang=&quot;en&quot;&gt;
     &lt;head&gt;
-<div id="step-1-puzzlespot-0" class="puzzle-piece missing"></div>    &lt;/head&gt;
+<div id="page-1-puzzlespot-0" class="puzzle-piece missing"></div>    &lt;/head&gt;
     &lt;body&gt;
         hello monetization!
     &lt;/body&gt;
@@ -37,17 +39,19 @@
         </pre>
     </div>
 
-    <!-- STEP 2 | CHALLENGE 1 CONFIRMATION -->
-    <div id="step-2" class="step-container">
-        <div class="step-avatar-container animate-in-out">
+    <!-- STEP 1 CONFIRMATION -->
+    <div class="page-container">
+        <div class="page-avatar-container animate-in-out">
             <img src="andra.png" class="andra-avatar">
         </div>
-        <div class="step-text animate-in-out">
+        <div class="page-text animate-in-out">
             <img src="speech_triangle.svg" class="speech-bubble-stem">
-            Including this one line of code allows visitors of my website to stream money to me via a <span style="color: #FFB566;">Web Monetization Provider</span>.
+            <p>
+                Including this one line of code allows visitors of my website to stream money to me via a <span style="color: #FFB566;">Web Monetization Provider</span>.
+            </p>
         </div>
         <div class="puzzlepiece-container animate-in-out">
-            <button onclick="transitionToStep(3)" class="animate-in-out">NEXT →</button>
+            <button onclick="transitionToPage(3)" class="animate-in-out">NEXT →</button>
         </div>
         <pre class="code-container animate-in-out">
 &lt;html lang=&quot;en&quot;&gt;
@@ -61,9 +65,9 @@
         </pre>
     </div>
 
-    <!-- STEP 3 | CHALLENGE 2 -->
-    <div id="step-3" class="step-container">
-        <button onclick="transitionToStep(0)" class="animate-in-out">BACK TO START</button>
+    <!-- STEP 2 -->
+    <div class="page-container">
+        <button onclick="transitionToPage(0)" class="animate-in-out">BACK TO START</button>
     </div>
 
     <script src="index.js"></script>
