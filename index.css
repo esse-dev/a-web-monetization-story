@@ -1,31 +1,116 @@
+:root {
+    --light-color: #F3EFEB;
+    --main-color: #FFB566;
+    --dark-color: #731245;
+}
+
 html, body {
     margin: 0;
-    display: flex;
-    flex-direction: row;
+    background-color: var(--light-color);
+    font-family: 'Source Sans Pro', sans-serif;
+    overflow: hidden;
 }
 
 .step-container {
     display: grid;
     height: 100vh;
     width: 100vw;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 7vh 1fr 1fr 7vh;
+    grid-template-rows: 4vw 1fr 1fr 1fr 1fr 4vw;
+    grid-gap: 40px;
+    border: 14px solid var(--dark-color);
+    box-sizing: border-box;
 }
 
-.step-info-container {
-    grid-column: 1;
-    grid-row: 1;
-    background: #eee;
+.animate-in-out {
+    opacity: 0.01;
+    transition: opacity 0.5s;
+}
+
+.step-avatar-container {
+    grid-column: 2;
+    grid-row: 2 / 3;
+}
+
+.speech-bubble-stem {
+    position: absolute; top: -60px; margin-left: auto;
+    margin-right: auto;
+    left: -40%;
+    right: 0;
+    height: 70px;
+    text-align: center;
 }
 
 .puzzlepiece-container {
-    grid-column: 1;
-    grid-row: 2;
-    background: #ccc;
+    grid-column: 2;
+    grid-row: 5;
+    height: 100%;
+}
+
+.puzzle-piece {
+    width: 300px;
+    height: 80px;
+    background-image: url('puzzle.svg');
+    background-size: 300px auto;
+    background-repeat: no-repeat;
+}
+
+.missing {
+    background-image: url('puzzle_missing.svg');
 }
 
 .code-container {
+    grid-column: 3;
+    grid-row: 2 / 6;
+    margin: 0;
+    padding: 40px;
+
+    font-size: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-family: 'Fira Code', monospace;
+}
+
+.step-text {
     grid-column: 2;
-    grid-row: 1 / 3;
-    background: #aaa;
+    grid-row: 3 / 5;
+
+    position: relative;
+
+    background: var(--dark-color);
+    color: var(--light-color);
+    font-size: 23px;
+    border-radius: 35px;
+    padding: 40px;
+}
+
+.andra-avatar {
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+
+    border-radius: 100%;
+    border: 6px solid var(--dark-color);
+}
+
+/* Dragula CSS Release 3.2.0 from: https://github.com/bevacqua/dragula */
+.gu-mirror {
+    position: fixed !important;
+    margin: 0 !important;
+    z-index: 9999 !important;
+    transform: rotate(10deg);
+}
+.gu-hide {
+    display: none !important;
+}
+.gu-unselectable {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+.gu-transit {
+    opacity: 0;
 }
