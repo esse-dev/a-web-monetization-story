@@ -1,22 +1,26 @@
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.js"></script>
     <meta name="monetization" content="$ilp.uphold.com/aEYQyH47UYPY">
+    <title>A Web Monetization Story</title>
+    <meta name=”description” content=”An interactive Web Monetization tutorial for online creators”>
 </head>
 <body>
     <!-- LANDING SCREEN -->
     <div class="page-container">
-        <button onclick="transitionToPage(1)" class="animate-in-out">NEXT →</button>
+        <div class="page-text animate-in-out">
+            <button onclick="transitionToPage(1)">NEXT →</button>
+        </div>
     </div>
 
     <!-- STEP 1 -->
     <div class="page-container">
-        <div class="page-avatar-container animate-in-out">
+        <div class="page-avatar-container animate-in">
             <img src="andra.png" class="andra-avatar">
         </div>
-        <div class="page-text animate-in-out">
+        <div class="page-text animate-in">
             <img src="speech_triangle.svg" class="speech-bubble-stem">
             <p>
                 All I had to do to enable monetization on my site was add the <span style="color: #FFB566;">Web Monetization meta tag</span>.
@@ -25,10 +29,10 @@
                 It’s easy! Drag the <span class="code-font">meta</span> tag into the <span class="code-font">head</span> tag in the html on the right.
             </p>
         </div>
-        <div id="page-1-puzzlepiece-container" class="puzzlepiece-container animate-in-out">
+        <div id="page-1-puzzlepiece-container" class="puzzlepiece-container animate-in">
             <div class="puzzle-piece"></div>
         </div>
-        <pre class="code-container animate-in-out">
+        <pre class="code-container animate-in">
 &lt;html lang=&quot;en&quot;&gt;
     &lt;head&gt;
 <div id="page-1-puzzlespot-0" class="puzzle-piece missing"></div>    &lt;/head&gt;
@@ -41,19 +45,19 @@
 
     <!-- STEP 1 CONFIRMATION -->
     <div class="page-container">
-        <div class="page-avatar-container animate-in-out">
+        <div class="page-avatar-container animate-out">
             <img src="andra.png" class="andra-avatar">
         </div>
-        <div class="page-text animate-in-out">
+        <div class="page-text animate-out">
             <img src="speech_triangle.svg" class="speech-bubble-stem">
             <p>
                 Including this one line of code allows visitors of my website to stream money to me via a <span style="color: #FFB566;">Web Monetization Provider</span>.
             </p>
         </div>
-        <div class="puzzlepiece-container animate-in-out">
-            <button onclick="transitionToPage(3)" class="animate-in-out">NEXT →</button>
+        <div class="puzzlepiece-container animate-out">
+            <button onclick="transitionToPage(3)" class="animate-out">NEXT →</button>
         </div>
-        <pre class="code-container animate-in-out">
+        <pre class="code-container animate-out">
 &lt;html lang=&quot;en&quot;&gt;
     &lt;head&gt;
         &lt;meta name=&quot;monetization&quot; content=&quot;MY_PAYMENT_POINTER&quot;&gt;

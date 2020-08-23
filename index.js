@@ -41,21 +41,33 @@ function transitionToPage(nextPageNum) {
     const currentPageEl = pageEls[currentPageNum];
     let delay = 0;
     // Get all animated elements in the current page element.
-    const animatedEls = currentPageEl.getElementsByClassName('animate-in-out');
+    const animatedEls =
+        currentPageEl.querySelectorAll('.animate-in-out, .animate-in, .animate-out');
+    const animatedNotInEls =
+        currentPageEl.querySelectorAll('.animate-in-out, .animate-out');
 
     // Hide all animated elements in the current page.
-    for (const animatedEl of animatedEls) {
-        animatedEl.style.opacity = 0;
-        animatedEl.style.transitionDelay = `${delay}s`;
-        delay += 0.1;
-    }
+    // setTimeout is used so .animate-in elements are hidden AFTER transitioning to the next page.
+    setTimeout(() => {
+        for (const animatedEl of animatedEls) {
+            if (animatedEl.classList.contains('animate-in')) {
+                animatedEl.style.transitionDuration = '0s';
+                animatedEl.style.transitionDelay = '0s';
+            }
+            if (animatedEl.classList.contains('animate-out')) {
+                animatedEl.style.transitionDuration = '0.2s';
+                animatedEl.style.transitionDelay = `${delay}s`;
+            }
+            animatedEl.style.opacity = 0;
+            delay += 0.1;
+        }
+    }, 10);
 
     // Once all elements in the current page are hidden, show the next page.
-    const lastAnimatedEl = animatedEls[animatedEls.length - 1];
     setTimeout(() => {
         window.location.href = '#page-' + nextPageNum;
         showPage(nextPageNum);
-    }, 1100);
+    }, (animatedNotInEls.length > 0) ? 700 : 0);
 }
 
 // showPage is used by transitionToPage and transitionToPageInURL
@@ -67,10 +79,18 @@ function showPage(nextPageNum) {
     nextPageEl.scrollIntoView();
 
     let delay = 0;
-    const animatedEls = nextPageEl.getElementsByClassName('animate-in-out');
+    const animatedEls = nextPageEl.querySelectorAll('.animate-in-out, .animate-in, .animate-out');
     for (const animatedEl of animatedEls) {
+        if (animatedEl.classList.contains('animate-out')) {
+            console.log('hi')
+            animatedEl.style.transitionDuration = '0s';
+            animatedEl.style.transitionDelay = '0s';
+        }
+        if (animatedEl.classList.contains('animate-in')) {
+            animatedEl.style.transitionDuration = '0.2s';
+            animatedEl.style.transitionDelay = `${delay}s`;
+        }
         animatedEl.style.opacity = 1;
-        animatedEl.style.transitionDelay = `${delay}s`;
         delay += 0.1;
     }
 }
