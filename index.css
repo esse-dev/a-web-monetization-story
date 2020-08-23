@@ -85,6 +85,7 @@ a {
     background-image: url('puzzle.svg');
     background-size: 300px auto;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .missing {
@@ -166,7 +167,7 @@ a {
     margin: 0;
 }
 
-.andra-avatar {
+.auden-avatar {
     height: 100%;
     display: block;
     margin: 0 auto;
@@ -174,7 +175,7 @@ a {
     border-radius: 100%;
     border: 6px solid var(--dark-color);
 }
-.dark-page .andra-avatar {
+.dark-page .auden-avatar {
     border: 6px solid var(--light-color);
 }
 
@@ -204,6 +205,8 @@ button:active {
 
 button:disabled {
     box-shadow: 0 0 0 var(--light-color);
+    cursor: auto;
+    opacity: 0.5;
 }
 
 .dark-page button, .nextback-container button {
@@ -217,6 +220,8 @@ button:disabled {
     border: 5px solid var(--light-color);
     box-shadow: 10px 10px 0px var(--light-color);
     color: var(--dark-color);
+    cursor: auto;
+    opacity: 0.5;
 }
 .dark-page button:disabled:hover, .nextback-container button:disabled:hover {
     box-shadow: 10px 10px 0px var(--light-color);
