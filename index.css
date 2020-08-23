@@ -104,6 +104,7 @@ a {
     margin: 0;
     padding: 40px;
 
+    line-height: 120%;
     font-size: 14px; /* temp size reduction to fit content */
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -239,6 +240,32 @@ button:disabled {
 .dark-page button:active, .nextback-container button:active {
     background: var(--main-color);
     color: var(--dark-color);
+}
+
+/* Syntax Highlighting Classes */
+.syntax-plain {
+    color: var(--light-color);
+}
+
+.syntax-htmltag {
+    color: #4BAEFF;
+}
+
+.syntax-htmltagpunctuation {
+    color: #99ABBA;
+}
+
+.syntax-variable {
+    color: #00CCCC;
+}
+
+/* control: if, for, else, etc. */
+.syntax-functionorcontrol {
+    color: #F48BC1;
+}
+
+.syntax-string {
+    color: var(--main-color);
 }
 
 /* Dragula CSS Release 3.2.0 from: https://github.com/bevacqua/dragula */
