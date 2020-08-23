@@ -2,11 +2,31 @@
  * Enable drag and drop using the Dragula library
  */
 dragula([
-    document.getElementById("page-1-puzzlepiece-container"),
-    document.getElementById("page-1-puzzlespot-0")
+    /**
+     * Adding all the elements to the same dragula might actually allow
+     * any puzzle piece to get dragged and dropped into any puzzlespot,
+     * but since all puzzle piece + spot pairs are on "separate pages",
+     * this will work for our purposes.
+     */
+    document.getElementById('step-1-puzzlepiece-container'),
+    document.getElementById('step-1-puzzlespot'),
+    document.getElementById('step-2-puzzlepiece-container'),
+    document.getElementById('step-2-puzzlespot'),
+    document.getElementById('step-3-puzzlepiece-container'),
+    document.getElementById('step-3-puzzlespot'),
+    document.getElementById('step-4-part-1-puzzlepiece-container'),
+    document.getElementById('step-4-part-1-puzzlespot'),
+    document.getElementById('step-4-part-2-puzzlepiece-container'),
+    document.getElementById('step-4-part-2-puzzlespot')
 ])
-.on("drop", function (el) {
-    transitionToPage(2);
+.on('drop', function (el, source, target, sibling) {
+    // console.log("element", el); // The draggable puzzle piece
+    // console.log("source", source); // The missing puzzle piece div is the source for some reason
+    // console.log("target", target); // The container holding the puzzle piece is the target for some reason
+    if (source.classList.contains('puzzle-piece') && source.classList.contains('missing')) {
+        transitionToNextPage();
+        target.querySelector('.next-button').style.display = 'inline';
+    }
 });
 
 
@@ -68,6 +88,14 @@ function transitionToPage(nextPageNum) {
         window.location.href = '#page-' + nextPageNum;
         showPage(nextPageNum);
     }, (animatedNotInEls.length > 0) ? 700 : 0);
+}
+
+function transitionToNextPage() {
+    transitionToPage(currentPageNum + 1);
+}
+
+function transitionToPreviousPage() {
+    transitionToPage(currentPageNum - 1);
 }
 
 // showPage is used by transitionToPage and transitionToPageInURL

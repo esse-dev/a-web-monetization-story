@@ -11,6 +11,10 @@ html, body {
     overflow: hidden;
 }
 
+a {
+    color: var(--main-color);
+}
+
 .page-container {
     display: grid;
     height: 100vh;
@@ -75,7 +79,7 @@ html, body {
     margin: 0;
     padding: 40px;
 
-    font-size: 20px;
+    font-size: 14px; /* temp size reduction to fit content */
     white-space: pre-wrap;
     word-wrap: break-word;
     background-color: var(--dark-color);
@@ -97,7 +101,7 @@ html, body {
 .page-text p {
     background: var(--dark-color);
     color: var(--light-color);
-    font-size: 23px;
+    font-size: 16px;  /* temp size reduction to fit content */
     border-radius: 35px;
     padding: 40px;
     margin: 0;
