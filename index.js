@@ -25,7 +25,7 @@ dragula([
     // console.log("target", target); // The container holding the puzzle piece is the target for some reason
     if (source.classList.contains('puzzle-piece') && source.classList.contains('missing')) {
         transitionToNextPage();
-        target.querySelector('.next-button').style.display = 'inline';
+        target.parentElement.querySelector('.next-button')?.setAttribute('diabled', false);
     }
 });
 
@@ -48,6 +48,12 @@ for (const pageEl of pageEls) {
 window.addEventListener('popstate', transitionToPageInURL);
 // Once website is loaded show current page (to prevent images and fonts from showing up late)
 document.fonts.ready.then(transitionToPageInURL);
+// Page was getting scrolled halfway between pages when resizing, transitionToPageInURL should
+// handle scrolling back to the proper position once the resize happens.
+window.addEventListener('resize', () => {
+    const currentPageEl = pageEls[currentPageNum];
+    currentPageEl.scrollIntoView();
+});
 
 function transitionToPageInURL() {
     // Get the page number encoded in the URL. If there is no page in the URL, default to 0.
@@ -69,7 +75,7 @@ function transitionToPage(nextPageNum) {
     // Hide all animated elements in the current page.
     // setTimeout is used so .animate-in elements are hidden AFTER transitioning to the next page.
     setTimeout(() => {
-        for (const animatedEl of animatedEls) {
+        for (const animatedEl of Array.from(animatedEls).reverse()) {
             if (animatedEl.classList.contains('animate-in')) {
                 animatedEl.style.transitionDuration = '0s';
                 animatedEl.style.transitionDelay = '0s';
@@ -110,7 +116,6 @@ function showPage(nextPageNum) {
     const animatedEls = nextPageEl.querySelectorAll('.animate-in-out, .animate-in, .animate-out');
     for (const animatedEl of animatedEls) {
         if (animatedEl.classList.contains('animate-out')) {
-            console.log('hi')
             animatedEl.style.transitionDuration = '0s';
             animatedEl.style.transitionDelay = '0s';
         }
@@ -120,5 +125,13 @@ function showPage(nextPageNum) {
         }
         animatedEl.style.opacity = 1;
         delay += 0.1;
+    }
+
+    if (!nextPageEl.querySelector('.page-light-background')) {
+        document.getElementById('footer').classList.add('dark-footer');
+        document.getElementById('footer').classList.remove('light-footer');
+    } else {
+        document.getElementById('footer').classList.add('light-footer');
+        document.getElementById('footer').classList.remove('dark-footer');
     }
 }

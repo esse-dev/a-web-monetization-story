@@ -6,7 +6,7 @@
 
 html, body {
     margin: 0;
-    background-color: var(--light-color);
+    background-color: var(--dark-color);
     font-family: 'Source Sans Pro', sans-serif;
     overflow: hidden;
 }
@@ -19,11 +19,22 @@ a {
     display: grid;
     height: 100vh;
     width: 100vw;
-    grid-template-columns: 7vh 1fr 1fr 7vh;
-    grid-template-rows: 4vw 1fr 1fr 1fr 1fr 4vw;
-    grid-gap: 40px;
+    grid-template-columns: 0 500px 1fr 7vh;
+    grid-template-rows: 4vw 1fr 1fr 1fr 100px 70px;
+    grid-gap: 40px 0;
     border: 14px solid var(--dark-color);
     box-sizing: border-box;
+}
+
+.dark-page .page-text p {
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+.page-light-background {
+    grid-column: 2;
+    grid-row: 1 / 7;
+    background: var(--light-color);
 }
 
 .animate-in-out {
@@ -37,6 +48,12 @@ a {
 .animate-in {
     opacity: 0.01;
     transition: opacity 0.2s;
+}
+
+.nextback-container {
+    grid-row: 6;
+    grid-column: 3 / 5;
+    text-align: right;
 }
 
 .page-avatar-container {
@@ -59,6 +76,7 @@ a {
     grid-column: 2;
     grid-row: 5;
     height: 100%;
+    padding: 0 30px;
 }
 
 .puzzle-piece {
@@ -67,6 +85,7 @@ a {
     background-image: url('puzzle.svg');
     background-size: 300px auto;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .missing {
@@ -98,7 +117,6 @@ a {
     font-family: 'Source Sans Pro', sans-serif;
     color: var(--dark-color);
 }
-
 .light-footer a:link {
     color: var(--dark-color);
 }
@@ -112,9 +130,30 @@ a {
     color: var(--dark-color);
 }
 
+.dark-footer {
+    bottom: 20px;
+    left: 20px;
+    position: fixed;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--light-color);
+}
+.dark-footer a:link {
+    color: var(--light-color);
+}
+.dark-footer a:visited {
+    color: var(--light-color);
+}
+.dark-footer a:hover {
+    color: var(--light-color);
+}
+.dark-footer a:active {
+    color: var(--light-color);
+}
+
 .page-text {
     grid-column: 2;
     grid-row: 3 / 5;
+    padding: 0 30px;
 
     position: relative;
 }
@@ -128,7 +167,7 @@ a {
     margin: 0;
 }
 
-.andra-avatar {
+.auden-avatar {
     height: 100%;
     display: block;
     margin: 0 auto;
@@ -136,28 +175,65 @@ a {
     border-radius: 100%;
     border: 6px solid var(--dark-color);
 }
+.dark-page .auden-avatar {
+    border: 6px solid var(--light-color);
+}
 
 button {
+    padding: 15px 35px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s !important;
+
     background: var(--main-color);
     border: 5px solid var(--dark-color);
     box-shadow: 10px 10px 0px var(--dark-color);
-    padding: 20px 40px;
     color: var(--dark-color);
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 900;
-    font-size: 22px;
-    cursor: pointer;
-    transition: box-shadow 0.2s, transform 0.2s !important;
 }
 
 button:hover {
     box-shadow: 0 0 0 var(--dark-color);
     transform: translate(10px, 10px);
 }
-
 button:active {
     background: var(--dark-color);
     color: var(--light-color);
+}
+
+button:disabled {
+    box-shadow: 0 0 0 var(--light-color);
+    cursor: auto;
+    opacity: 0.5;
+}
+
+.dark-page button, .nextback-container button {
+    background: var(--dark-color);
+    border: 5px solid var(--main-color);
+    box-shadow: 10px 10px 0px var(--main-color);
+    color: var(--main-color);
+}
+.dark-page button:disabled, .nextback-container button:disabled {
+    background: var(--light-color);
+    border: 5px solid var(--light-color);
+    box-shadow: 10px 10px 0px var(--light-color);
+    color: var(--dark-color);
+    cursor: auto;
+    opacity: 0.5;
+}
+.dark-page button:disabled:hover, .nextback-container button:disabled:hover {
+    box-shadow: 10px 10px 0px var(--light-color);
+    transform: translate(0px, 0px);
+}
+.dark-page button:hover, .nextback-container button:hover {
+    box-shadow: 0 0 0 var(--main-color);
+    transform: translate(10px, 10px);
+}
+.dark-page button:active, .nextback-container button:active {
+    background: var(--main-color);
+    color: var(--dark-color);
 }
 
 /* Dragula CSS Release 3.2.0 from: https://github.com/bevacqua/dragula */
