@@ -83,19 +83,56 @@ a {
     padding: 0 30px;
 }
 
-.puzzle-piece {
-    width: 300px;
-    height: 80px;
-    margin: 0 auto;
-    background-image: url('puzzle.svg');
-    background-size: 300px auto;
-    background-repeat: no-repeat;
-    cursor: pointer;
+.puzzlepiece-container .puzzle-piece {
+    background-size: 440px auto;
+    padding: 18px 0 0 34px;
+    font-size: 9px;
 }
 
-.missing {
+.puzzlepiece-container .puzzle-piece-big {
+    background-size: 440px auto;
+    padding: 18px 0 0 34px;
+    font-size: 7px;
+}
+
+.puzzle-piece, .puzzle-piece-big {
+    width: 600px;
+    height: 80px;
+    margin: 0 auto;
+    background-image: url('smol_puzzle.svg');
+    background-size: 600px auto;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    color: var(--dark-color);
+    padding: 24px 0 0 50px;
+}
+
+.puzzle-piece-big {
+    height: 110px;
+    width: 650px;
+    background-size: 650px auto;
+    background-image: url('big_puzzle.svg');
+}
+
+.puzzle-piece-big.missing {
+    background-image: url('big_puzzle_missing.svg');
     margin: 0 20px;
-    background-image: url('puzzle_missing.svg');
+    padding: 0;
+    width: 650px;
+    background-size: 632px auto;
+    background-position: 2px 2px;
+}
+
+.puzzle-piece.missing {
+    margin: 0 20px;
+    padding: 0;
+    width: 580px;
+    background-size: 578px auto;
+    background-position: 2px 2px;
+    background-image: url('smol_puzzle_missing.svg');
 }
 
 .code-container {
@@ -282,16 +319,10 @@ button:disabled {
     position: fixed !important;
     margin: 0 !important;
     z-index: 9999 !important;
-    transform: rotate(10deg);
+    transform: rotate(5deg);
 }
 .gu-hide {
     display: none !important;
-}
-.gu-unselectable {
-    -webkit-user-select: none !important;
-    -moz-user-select: none !important;
-    -ms-user-select: none !important;
-    user-select: none !important;
 }
 .gu-transit {
     opacity: 0;

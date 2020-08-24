@@ -23,7 +23,9 @@ dragula([
     // console.log("element", el); // The draggable puzzle piece
     // console.log("source", source); // The missing puzzle piece div is the source for some reason
     // console.log("target", target); // The container holding the puzzle piece is the target for some reason
-    if (source.classList.contains('puzzle-piece') && source.classList.contains('missing')) {
+    if (source.classList.contains('puzzle-piece') ||
+        source.classList.contains('puzzle-piece-big') &&
+        source.classList.contains('missing')) {
         setTimeout(() => {
             transitionToNextPage();
             target.parentElement.querySelector('.next-button')?.removeAttribute('disabled');

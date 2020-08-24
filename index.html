@@ -13,13 +13,6 @@
         <a href="https://github.com/esse-dev/borzoi">Made by Sharon and Elliot</a>
     </div>
 
-    <!-- LANDING SCREEN -->
-    <div class="page-container dark-page">
-        <div class="nextback-container">
-            <button onclick="transitionToNextPage()" class="next-button">NEXT →</button>
-        </div>
-    </div>
-
     <!-- BACKSTORY 1 -->
     <div class="page-container dark-page">
         <div class="page-avatar-container animate-in">
@@ -35,7 +28,6 @@
             <img src="polaroid.svg" height="500px">
         </div>
         <div class="nextback-container">
-            <button onclick="transitionToPreviousPage()">← BACK</button>
             <button onclick="transitionToNextPage()" class="next-button">NEXT →</button>
         </div>
     </div>
@@ -128,7 +120,7 @@
             </p>
         </div>
         <div id="step-1-puzzlepiece-container" class="puzzlepiece-container animate-in">
-            <div class="puzzle-piece"></div>
+            <pre class="puzzle-piece">&lt;meta name=&quot;monetization&quot; content=&quot;MY_PAYMENT_POINTER&quot;&gt;</pre>
         </div>
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -191,7 +183,9 @@
             </p>
         </div>
         <div id="step-2-puzzlepiece-container" class="puzzlepiece-container animate-in">
-            <div class="puzzle-piece"></div>
+            <pre class="puzzle-piece-big">if (document.monetization) {
+
+}</pre>
         </div>
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -200,7 +194,7 @@
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
-            <div id="step-2-puzzlespot" class="puzzle-piece missing"></div>
+            <div id="step-2-puzzlespot" class="puzzle-piece-big missing"></div>
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
 <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">html</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -260,7 +254,9 @@
             </p>
         </div>
         <div id="step-3-puzzlepiece-container" class="puzzlepiece-container animate-in">
-            <div class="puzzle-piece"></div>
+            <pre class="puzzle-piece-big">document.monetization.addEventListener('monetizationprogress', event => {
+
+});</pre>
         </div>
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -270,7 +266,7 @@
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
             <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">) {</span>
-                <div id="step-3-puzzlespot" class="puzzle-piece missing"></div>
+                <div id="step-3-puzzlespot" class="puzzle-piece-big missing"></div>
             <span class="syntax-plain">}</span>
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -334,7 +330,9 @@
             </p>
         </div>
         <div id="step-4-part-1-puzzlepiece-container" class="puzzlepiece-container animate-in">
-            <div class="puzzle-piece"></div>
+            <pre class="puzzle-piece-big">&lt;div id=&quot;thank-you-note&quot; style=&quot;display: none;&quot;&gt;
+    Thank you for supporting me via Web Monetization &lt;3
+&lt;/div&gt;</pre>
         </div>
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -342,7 +340,7 @@
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <div id="step-4-part-1-puzzlespot" class="puzzle-piece missing"></div>
+        <div id="step-4-part-1-puzzlespot" class="puzzle-piece-big missing"></div>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
             <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">) {</span>
                 <span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">addEventListener</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;monetizationprogress&#39;</span><span class="syntax-plain">,</span> <span class="syntax-variable">event</span> <span class="syntax-plain">=&gt; {</span>
@@ -376,7 +374,7 @@
             </p>
         </div>
         <div id="step-4-part-2-puzzlepiece-container" class="puzzlepiece-container">
-            <div class="puzzle-piece"></div>
+            <pre class="puzzle-piece">document.getElementById('thank-you-note').style.display = 'block';</pre>
         </div>
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -385,8 +383,8 @@
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
 <span class="animate-in"><span class="syntax-newcode"></span>        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">div</span> <span class="syntax-variable">id</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;thank-you-note&quot;</span> <span class="syntax-variable">style</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;display: none;&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span></span>
-            <span class="syntax-plain">Thank you for supporting me via Web Monetization &lt;3</span>
-        <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">div</span><span class="syntax-htmltagpunctuation">&gt;</span>
+<span class="syntax-newcode"></span>            <span class="syntax-plain">Thank you for supporting me via Web Monetization &lt;3</span>
+<span class="syntax-newcode"></span>        <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">div</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
             <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">) {</span>
                 <span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">addEventListener</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;monetizationprogress&#39;</span><span class="syntax-plain">,</span> <span class="syntax-variable">event</span> <span class="syntax-plain">=&gt; {</span>
