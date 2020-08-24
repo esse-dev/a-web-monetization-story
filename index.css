@@ -60,6 +60,16 @@ a {
     float: right;
 }
 
+.getcode-container {
+    grid-row: 5;
+    grid-column: 3 / 5;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .page-avatar-container {
     grid-column: 2;
     grid-row: 2 / 3;
@@ -229,27 +239,6 @@ button {
     font-size: 18px;
     margin: 0 10px;
     cursor: pointer;
-    transition: box-shadow 0.2s, transform 0.2s !important;
-
-    background: var(--main-color);
-    border: 5px solid var(--dark-color);
-    box-shadow: 10px 10px 0px var(--dark-color);
-    color: var(--dark-color);
-}
-
-button:hover {
-    box-shadow: 0 0 0 var(--dark-color);
-    transform: translate(10px, 10px);
-}
-button:active {
-    background: var(--dark-color);
-    color: var(--light-color);
-}
-
-button:disabled {
-    box-shadow: 0 0 0 var(--light-color);
-    cursor: auto;
-    opacity: 0.5;
 }
 
 .dark-page button, .nextback-container button {
@@ -257,6 +246,8 @@ button:disabled {
     border: 5px solid var(--main-color);
     box-shadow: 10px 10px 0px var(--main-color);
     color: var(--main-color);
+
+    transition: box-shadow 0.2s, transform 0.2s !important;
 }
 .dark-page button:disabled, .nextback-container button:disabled {
     background: var(--light-color);
@@ -277,6 +268,20 @@ button:disabled {
 .dark-page button:active, .nextback-container button:active {
     background: var(--main-color);
     color: var(--dark-color);
+}
+
+.getcode-container button {
+    background: var(--main-color);
+    border: 5px solid var(--main-color);
+    color: var(--dark-color);
+}
+.getcode-container button:hover {
+    transform: translate(0, -10px) scale(1.1, 1.1);
+}
+.getcode-container button:active {
+    background: var(--dark-color);
+    color: var(--main-color);
+    border: 5px solid var(--main-color);
 }
 
 /* Syntax Highlighting Classes */

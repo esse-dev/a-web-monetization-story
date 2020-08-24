@@ -142,3 +142,41 @@ function showPage(nextPageNum) {
         document.getElementById('footer').classList.remove('dark-footer');
     }
 }
+
+async function copyCode() {
+    // Read the basic_web_monetization_code.html file
+    const codeText = await readFile(window.location.origin + '/borzoi/' + 'basic_web_monetization_code.html');
+
+    // Create hidden text area element to hold text, set the value and add it to the body
+    const tempTextArea = document.createElement("textarea");
+    tempTextArea.value = codeText;
+
+    // This element is visible, but is outside the visible view...
+    // Hiding it seems to prevent the text area from being selectable
+    // And thus the text cannot be copied
+    document.body.appendChild(tempTextArea);
+
+    // Select and copy the text to the clipboard
+    tempTextArea.select();
+    document.execCommand('copy');
+    tempTextArea.remove();
+}
+
+/**
+ * Read a file and return the text in the file.
+ *
+ * @param {String} fileName The name of the file to read.
+ * @returns The text read from the file.
+ */
+async function readFile(fileName) {
+    return await fetch(fileName)
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            } else {
+                console.log(response.status);
+                throw Error(response.status);
+            }
+        })
+        .catch(error => console.log(error));
+}
