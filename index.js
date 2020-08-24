@@ -25,7 +25,7 @@ dragula([
     // console.log("target", target); // The container holding the puzzle piece is the target for some reason
     if (source.classList.contains('puzzle-piece') && source.classList.contains('missing')) {
         transitionToNextPage();
-        target.parentElement.querySelector('.next-button')?.setAttribute('diabled', false);
+        target.parentElement.querySelector('.next-button')?.removeAttribute('disabled');
     }
 });
 
