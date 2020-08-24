@@ -24,8 +24,10 @@ dragula([
     // console.log("source", source); // The missing puzzle piece div is the source for some reason
     // console.log("target", target); // The container holding the puzzle piece is the target for some reason
     if (source.classList.contains('puzzle-piece') && source.classList.contains('missing')) {
-        transitionToNextPage();
-        target.parentElement.querySelector('.next-button')?.removeAttribute('disabled');
+        setTimeout(() => {
+            transitionToNextPage();
+            target.parentElement.querySelector('.next-button')?.removeAttribute('disabled');
+        }, 400);
     }
 });
 
@@ -79,13 +81,16 @@ function transitionToPage(nextPageNum) {
             if (animatedEl.classList.contains('animate-in')) {
                 animatedEl.style.transitionDuration = '0s';
                 animatedEl.style.transitionDelay = '0s';
+                setTimeout(() => {
+                    animatedEl.style.opacity = 0;
+                }, 800);
             }
             if (animatedEl.classList.contains('animate-out')) {
                 animatedEl.style.transitionDuration = '0.2s';
                 animatedEl.style.transitionDelay = `${delay}s`;
+                animatedEl.style.opacity = 0;
+                delay += 0.1;
             }
-            animatedEl.style.opacity = 0;
-            delay += 0.1;
         }
     }, 10);
 
