@@ -110,7 +110,7 @@ a {
     width: 600px;
     height: 80px;
     margin: 0 auto;
-    background-image: url('smol_puzzle.svg');
+    background-image: url('assets/smol_puzzle.svg');
     background-size: 600px auto;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -125,11 +125,11 @@ a {
     height: 110px;
     width: 650px;
     background-size: 650px auto;
-    background-image: url('big_puzzle.svg');
+    background-image: url('assets/big_puzzle.svg');
 }
 
 .puzzle-piece-big.missing {
-    background-image: url('big_puzzle_missing.svg');
+    background-image: url('assets/big_puzzle_missing.svg');
     margin: 0 20px;
     padding: 0;
     width: 650px;
@@ -144,7 +144,7 @@ a {
     width: 580px;
     background-size: 578px auto;
     background-position: 2px 2px;
-    background-image: url('smol_puzzle_missing.svg');
+    background-image: url('assets/smol_puzzle_missing.svg');
     cursor: auto;
 }
 
