@@ -322,6 +322,7 @@ button {
     background: #25F2A8;
 }
 
+/* Mobile/small screen/large screen styling */
 .mobile-landing-page {
     color: var(--light-color);
     background: var(--dark-color);
@@ -382,4 +383,18 @@ button {
     .syntax-newcode {
         height: 20px;
     }
+}
+
+.getcode-copy-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.getcode-copy-feedback-image {
+    display: block;
+    max-width: 150px;
+    margin: -170px 0px 20px 0px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
 }

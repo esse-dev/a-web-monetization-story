@@ -160,6 +160,12 @@ async function copyCode() {
     tempTextArea.select();
     document.execCommand('copy');
     tempTextArea.remove();
+
+    // Let the user know that text has been copied to the clipboard
+    document.getElementById('copied-code-image').style.opacity = 1;
+    setTimeout(() => {
+        document.getElementById('copied-code-image').style.opacity = 0;
+    }, 2500);
 }
 
 /**
