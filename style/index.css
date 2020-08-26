@@ -110,7 +110,7 @@ a {
     width: 600px;
     height: 80px;
     margin: 0 auto;
-    background-image: url('smol_puzzle.svg');
+    background-image: url('../assets/smol_puzzle.svg');
     background-size: 600px auto;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -125,11 +125,11 @@ a {
     height: 110px;
     width: 650px;
     background-size: 650px auto;
-    background-image: url('big_puzzle.svg');
+    background-image: url('../assets/big_puzzle.svg');
 }
 
 .puzzle-piece-big.missing {
-    background-image: url('big_puzzle_missing.svg');
+    background-image: url('../assets/big_puzzle_missing.svg');
     margin: 0 20px;
     padding: 0;
     width: 650px;
@@ -144,7 +144,7 @@ a {
     width: 580px;
     background-size: 578px auto;
     background-position: 2px 2px;
-    background-image: url('smol_puzzle_missing.svg');
+    background-image: url('../assets/smol_puzzle_missing.svg');
     cursor: auto;
 }
 
@@ -322,25 +322,14 @@ button {
     background: #25F2A8;
 }
 
-/* Dragula CSS Release 3.2.0 from: https://github.com/bevacqua/dragula */
-.gu-mirror {
-    position: fixed !important;
-    margin: 0 !important;
-    z-index: 9999 !important;
-    transform: rotate(5deg);
-}
-.gu-hide {
-    display: none !important;
-}
-.gu-transit {
-    opacity: 0;
-}
-
-
+/* Mobile/small screen/large screen styling */
 .mobile-landing-page {
     color: var(--light-color);
     background: var(--dark-color);
     padding: 40px;
+}
+.mobile-landing-page li {
+    padding: 0px 0px 8px 0px;
 }
 .mobile-landing-page a:link {
     color: var(--light-color);
@@ -353,6 +342,9 @@ button {
 }
 .mobile-landing-page a:active {
     color: var(--light-color);
+}
+.mobile-landing-page-highlight-text {
+    color: var(--main-color);
 }
 @media (max-width: 1000px) {
     .mobile-landing-page {
@@ -391,4 +383,18 @@ button {
     .syntax-newcode {
         height: 20px;
     }
+}
+
+.getcode-copy-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.getcode-copy-feedback-image {
+    display: block;
+    max-width: 150px;
+    margin: -170px 0px 20px 0px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
 }
