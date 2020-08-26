@@ -327,6 +327,9 @@ button {
     background: var(--dark-color);
     padding: 40px;
 }
+.mobile-landing-page li {
+    padding: 0px 0px 8px 0px;
+}
 .mobile-landing-page a:link {
     color: var(--light-color);
 }
@@ -338,6 +341,9 @@ button {
 }
 .mobile-landing-page a:active {
     color: var(--light-color);
+}
+.mobile-landing-page-highlight-text {
+    color: var(--main-color);
 }
 @media (max-width: 1000px) {
     .mobile-landing-page {
