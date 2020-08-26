@@ -20,7 +20,7 @@ a {
     height: 100vh;
     width: 100vw;
     grid-template-columns: 0 500px 1fr 7vh;
-    grid-template-rows: 4vw 1fr 1fr 1fr 100px 70px;
+    grid-template-rows: 4vw 1fr 1fr 1fr 100px auto;
     grid-gap: 40px 0;
     border: 14px solid var(--dark-color);
     box-sizing: border-box;
@@ -54,7 +54,8 @@ a {
     grid-row: 6;
     grid-column: 3 / 5;
     text-align: left;
-    padding-left: 30px;
+
+    padding-bottom: 10px;
 }
 .next-button {
     float: right;
@@ -239,7 +240,7 @@ button {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 900;
     font-size: 18px;
-    margin: 0 10px;
+    margin: 0 14px;
     cursor: pointer;
 }
 
