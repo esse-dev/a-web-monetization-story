@@ -134,6 +134,7 @@ a {
     width: 650px;
     background-size: 632px auto;
     background-position: 2px 2px;
+    cursor: auto;
 }
 
 .puzzle-piece.missing {
@@ -143,6 +144,7 @@ a {
     background-size: 578px auto;
     background-position: 2px 2px;
     background-image: url('smol_puzzle_missing.svg');
+    cursor: auto;
 }
 
 .code-container {
@@ -214,7 +216,7 @@ a {
 .page-text p {
     background: var(--dark-color);
     color: var(--light-color);
-    font-size: 16px;  /* temp size reduction to fit content */
+    font-size: 16px;
     border-radius: 35px;
     padding: 40px;
     margin: 0;
@@ -357,5 +359,35 @@ button {
     }
     .page-container {
         display: none;
+    }
+}
+@media (min-width: 1600px) {
+    .page-container {
+        grid-template-columns: 0 600px 1fr 7vh;
+    }
+    .auden-avatar {
+        height: 150px;
+    }
+    .speech-bubble-stem {
+        left: -50%;
+    }
+    .page-text p {
+        font-size: 20px;
+    }
+    .code-container {
+        font-size: 17px;
+    }
+    .puzzlepiece-container .puzzle-piece {
+        background-size: 560px auto;
+        padding: 20px 0 0 40px;
+        font-size: 12px;
+    }
+    .puzzlepiece-container .puzzle-piece-big {
+        background-size: 560px auto;
+        padding: 25px 0 0 40px;
+        font-size: 10px;
+    }
+    .syntax-newcode {
+        height: 20px;
     }
 }
