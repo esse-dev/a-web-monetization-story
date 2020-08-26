@@ -1,0 +1,16 @@
+/**
+ * Dragula class overrides from Dragula CSS Release 3.2.0 from: https://github.com/bevacqua/dragula
+ */
+
+.gu-mirror {
+    position: fixed !important;
+    margin: 0 !important;
+    z-index: 9999 !important;
+    transform: rotate(5deg);
+}
+.gu-hide {
+    display: none !important;
+}
+.gu-transit {
+    opacity: 0;
+}

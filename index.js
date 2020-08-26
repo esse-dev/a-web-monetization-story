@@ -145,7 +145,7 @@ function showPage(nextPageNum) {
 
 async function copyCode() {
     // Read the basic_web_monetization_code.html file
-    const codeText = await readFile(window.location.origin + '/borzoi/' + 'basic_web_monetization_code.html');
+    const codeText = await readFile(window.location.origin + '/borzoi/' + 'samples/basic_web_monetization_code.html');
 
     // Create hidden text area element to hold text, set the value and add it to the body
     const tempTextArea = document.createElement("textarea");

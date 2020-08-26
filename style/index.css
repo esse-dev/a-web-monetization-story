@@ -110,7 +110,7 @@ a {
     width: 600px;
     height: 80px;
     margin: 0 auto;
-    background-image: url('assets/smol_puzzle.svg');
+    background-image: url('../assets/smol_puzzle.svg');
     background-size: 600px auto;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -125,11 +125,11 @@ a {
     height: 110px;
     width: 650px;
     background-size: 650px auto;
-    background-image: url('assets/big_puzzle.svg');
+    background-image: url('../assets/big_puzzle.svg');
 }
 
 .puzzle-piece-big.missing {
-    background-image: url('assets/big_puzzle_missing.svg');
+    background-image: url('../assets/big_puzzle_missing.svg');
     margin: 0 20px;
     padding: 0;
     width: 650px;
@@ -144,7 +144,7 @@ a {
     width: 580px;
     background-size: 578px auto;
     background-position: 2px 2px;
-    background-image: url('assets/smol_puzzle_missing.svg');
+    background-image: url('../assets/smol_puzzle_missing.svg');
     cursor: auto;
 }
 
@@ -321,21 +321,6 @@ button {
     display: inline-block;
     background: #25F2A8;
 }
-
-/* Dragula CSS Release 3.2.0 from: https://github.com/bevacqua/dragula */
-.gu-mirror {
-    position: fixed !important;
-    margin: 0 !important;
-    z-index: 9999 !important;
-    transform: rotate(5deg);
-}
-.gu-hide {
-    display: none !important;
-}
-.gu-transit {
-    opacity: 0;
-}
-
 
 .mobile-landing-page {
     color: var(--light-color);
