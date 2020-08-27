@@ -33,6 +33,34 @@
         <a href="https://github.com/esse-dev/borzoi">Made by Sharon and Elliot</a>
     </footer>
 
+    <!-- LANDING PAGE -->
+    <div class="page-container dark-page">
+        <div class="landing-page-avatar-container animate-in">
+            <img src="assets/auden.png" class="auden-avatar">
+        </div>
+        <div class="landing-page-text-container">
+            <h1>Hi, I’m Auden</h1>
+            <p>and here’s my Web Monetization story</p>
+        </div>
+        <div class="landing-page-puzzle-grid">
+            <div id="landing-page-puzzlepiece-container" class="landing-page-puzzlepiece-container">
+                <div class="landing-page-puzzlepiece">BEGIN</div>
+            </div>
+            <div class="landing-page-puzzlespot-container">
+                <div id="landing-page-puzzlespot" class="landing-page-puzzlepiece missing"></div>
+                <div id="drag-to-start-story-div">
+                    <img src="assets/drag_to_start_story.svg" onmousedown="event.preventDefault()">
+                    <!-- hide drag to start image once begin puzzle piece is dragged. if BEGIN puzzle piece goes back
+                         to original spot, then show it
+                    -->
+                    <!-- implement button to continue if BEGIN button is dragged into place and we
+                         navigate back to the landing page
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- BACKSTORY 1 -->
     <div class="page-container dark-page">
         <div class="page-avatar-container animate-in">
@@ -48,6 +76,7 @@
             <img src="assets/polaroid.svg" height="500px" alt="Illustration of a polaroid photo of Auden and Chicken">
         </div>
         <div class="nextback-container">
+            <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
             <button onclick="transitionToNextPage()" class="next-button" tabindex="-1">NEXT →</button>
         </div>
     </div>

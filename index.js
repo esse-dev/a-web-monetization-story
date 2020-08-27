@@ -8,6 +8,8 @@ dragula([
      * but since all puzzle piece + spot pairs are on "separate pages",
      * this will work for our purposes.
      */
+    document.getElementById('landing-page-puzzlepiece-container'),
+    document.getElementById('landing-page-puzzlespot'),
     document.getElementById('step-1-puzzlepiece-container'),
     document.getElementById('step-1-puzzlespot'),
     document.getElementById('step-2-puzzlepiece-container'),
@@ -23,7 +25,8 @@ dragula([
     // console.log("element", el); // The draggable puzzle piece
     // console.log("source", source); // The missing puzzle piece div is the source for some reason
     // console.log("target", target); // The container holding the puzzle piece is the target for some reason
-    if (source.classList.contains('puzzle-piece') ||
+    if (source.classList.contains('landing-page-puzzlepiece') ||
+        source.classList.contains('puzzle-piece') ||
         source.classList.contains('puzzle-piece-big') &&
         source.classList.contains('missing')) {
         setTimeout(() => {
