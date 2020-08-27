@@ -49,9 +49,9 @@ for (const pageEl of pageEls) {
 
 // The 'popstate' event is triggered when the user navigates toa new URL within the current website.
 // For instance, this happens when the user presses the browser back button.
-window.addEventListener('popstate', transitionToPageInURL);
+window.addEventListener('popstate', showPageInURL);
 // Once website is loaded show current page (to prevent images and fonts from showing up late)
-document.fonts.ready.then(transitionToPageInURL);
+document.fonts.ready.then(showPageInURL);
 // Page was getting scrolled halfway between pages when resizing, transitionToPageInURL should
 // handle scrolling back to the proper position once the resize happens.
 window.addEventListener('resize', () => {
@@ -59,35 +59,42 @@ window.addEventListener('resize', () => {
     currentPageEl.scrollIntoView();
 });
 
-function transitionToPageInURL() {
+function showPageInURL() {
     // Get the page number encoded in the URL. If there is no page in the URL, default to 0.
     const pageInUrl = parseInt(window.location.hash.replace('#page-', '')) || 0;
     if (pageInUrl !== currentPageNum) {
-        showPage(pageInUrl);
+        const isGoingToPreviousPage = pageInUrl === currentPageNum - 1;
+        showPage(pageInUrl, isGoingToPreviousPage);
     }
 }
 
-function transitionToPage(nextPageNum) {
+function transitionToPage(nextPageNum, reverseAnimation = false) {
     const currentPageEl = pageEls[currentPageNum];
     let delay = 0;
     // Get all animated elements in the current page element.
     const animatedEls =
-        currentPageEl.querySelectorAll('.animate-in-out, .animate-in, .animate-out');
-    const animatedNotInEls =
-        currentPageEl.querySelectorAll('.animate-in-out, .animate-out');
+        currentPageEl.querySelectorAll('.animate-in, .animate-out');
+    const animatedOutEls =
+        currentPageEl.querySelectorAll('.animate-out');
+    const animatedInEls =
+        currentPageEl.querySelectorAll('.animate-in');
 
     // Hide all animated elements in the current page.
     // setTimeout is used so .animate-in elements are hidden AFTER transitioning to the next page.
     setTimeout(() => {
         for (const animatedEl of Array.from(animatedEls).reverse()) {
-            if (animatedEl.classList.contains('animate-in')) {
+            const elIsAnimatingOut =
+                (animatedEl.classList.contains('animate-out') && !reverseAnimation) ||
+                (animatedEl.classList.contains('animate-in') && reverseAnimation);
+
+            if (!elIsAnimatingOut) {
                 animatedEl.style.transitionDuration = '0s';
                 animatedEl.style.transitionDelay = '0s';
                 setTimeout(() => {
                     animatedEl.style.opacity = 0;
                 }, 800);
             }
-            if (animatedEl.classList.contains('animate-out')) {
+            if (elIsAnimatingOut) {
                 animatedEl.style.transitionDuration = '0.2s';
                 animatedEl.style.transitionDelay = `${delay}s`;
                 animatedEl.style.opacity = 0;
@@ -97,10 +104,14 @@ function transitionToPage(nextPageNum) {
     }, 10);
 
     // Once all elements in the current page are hidden, show the next page.
+    const isPageAnimatingOut = (animatedOutEls.length > 0 && !reverseAnimation) ||
+                               (animatedInEls.length > 0 && reverseAnimation);
+    const totalPageAnimateOutTime = delay*100 + 200;
+
     setTimeout(() => {
         window.location.href = '#page-' + nextPageNum;
-        showPage(nextPageNum);
-    }, (animatedNotInEls.length > 0) ? 700 : 0);
+        // Showing the next page is handled by the popstate listener
+    }, isPageAnimatingOut ? totalPageAnimateOutTime + 200 : 20);
 }
 
 function transitionToNextPage() {
@@ -108,25 +119,30 @@ function transitionToNextPage() {
 }
 
 function transitionToPreviousPage() {
-    transitionToPage(currentPageNum - 1);
+    transitionToPage(currentPageNum - 1, true);
 }
 
 // showPage is used by transitionToPage and transitionToPageInURL
 // not recommended to be called manually!
-function showPage(nextPageNum) {
+function showPage(nextPageNum, reverseAnimation = false) {
     currentPageNum = nextPageNum;
 
     const nextPageEl = pageEls[nextPageNum];
     nextPageEl.scrollIntoView();
 
     let delay = 0;
-    const animatedEls = nextPageEl.querySelectorAll('.animate-in-out, .animate-in, .animate-out');
+    const animatedEls = nextPageEl.querySelectorAll('.animate-in, .animate-out');
+
     for (const animatedEl of animatedEls) {
-        if (animatedEl.classList.contains('animate-out')) {
+        const elIsAnimatingIn =
+            (animatedEl.classList.contains('animate-in') && !reverseAnimation) ||
+            (animatedEl.classList.contains('animate-out') && reverseAnimation);
+
+        if (!elIsAnimatingIn) {
             animatedEl.style.transitionDuration = '0s';
             animatedEl.style.transitionDelay = '0s';
         }
-        if (animatedEl.classList.contains('animate-in')) {
+        if (elIsAnimatingIn) {
             animatedEl.style.transitionDuration = '0.2s';
             animatedEl.style.transitionDelay = `${delay}s`;
         }
