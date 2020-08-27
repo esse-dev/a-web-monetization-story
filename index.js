@@ -139,12 +139,17 @@ function transitionToPage(nextPageNum, reverseAnimation = false) {
     }, isPageAnimatingOut ? totalPageAnimateOutTime + 200 : 20);
 }
 
+const MAX_PAGE_NUM = 13;
 function transitionToNextPage() {
-    transitionToPage(currentPageNum + 1);
+    if (currentPageNum < MAX_PAGE_NUM) {
+        transitionToPage(currentPageNum + 1);
+    }
 }
 
 function transitionToPreviousPage() {
-    transitionToPage(currentPageNum - 1, true);
+    if (currentPageNum > 0) {
+        transitionToPage(currentPageNum - 1, true);
+    }
 }
 
 // showPage is used by transitionToPage and transitionToPageInURL
@@ -227,3 +232,30 @@ async function readFile(fileName) {
         })
         .catch(error => console.log(error));
 }
+
+
+/**
+ * The following code adds basic keyboard navigation support. Users can tab-key between links on
+ * pages. Users can use the arrow keys to go to the next and previous page.
+ */
+function getAncestorEl(elem, selector) {
+	for ( ; elem && elem !== document; elem = elem.parentNode ) {
+		if ( elem.matches( selector ) ) return elem;
+	}
+	return null;
+};
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') {
+        transitionToNextPage();
+    }
+    if (e.key === 'ArrowLeft') {
+        transitionToPreviousPage();
+    }
+});
+window.addEventListener('focus', () => {
+    const pageContainerAncestor = getAncestorEl(document.activeElement, '.page-container');
+    if (pageContainerAncestor) {
+        showPage(parseInt(pageContainerAncestor.id.replace('page-', '')));
+    }
+}, true);
