@@ -37,10 +37,6 @@ a {
     background: var(--light-color);
 }
 
-.animate-in-out {
-    opacity: 0.01;
-    transition: opacity 0.2s;
-}
 .animate-out {
     opacity: 1;
     transition: opacity 0.2s;
@@ -98,12 +94,37 @@ a {
     background-size: 440px auto;
     padding: 18px 0 0 34px;
     font-size: 9px;
+    animation: bounce 6s infinite;
 }
 
 .puzzlepiece-container .puzzle-piece-big {
     background-size: 440px auto;
     padding: 18px 0 0 34px;
     font-size: 7px;
+    animation: bounce 6s infinite;
+}
+
+@keyframes bounce {
+    0%, 10%, 25%, 40%, 50% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-30px);
+    }
+    30% {
+        transform: translateY(-15px);
+    }
+}
+@keyframes pulse {
+    0%, 20%, 50%, 80%, 100% {
+        transform: scale(1, 1);
+    }
+    40% {
+        transform: scale(1.2,1.2) translate(60px, -60px);
+    }
+    60% {
+        transform: scale(1.1,1.1) translate(20px, -20px);
+    }
 }
 
 .puzzle-piece, .puzzle-piece-big {
@@ -113,7 +134,7 @@ a {
     background-image: url('../assets/smol_puzzle.svg');
     background-size: 600px auto;
     background-repeat: no-repeat;
-    cursor: pointer;
+    cursor: grab;
 
     font-family: 'Fira Code', monospace;
     font-size: 12px;
@@ -135,7 +156,7 @@ a {
     width: 650px;
     background-size: 632px auto;
     background-position: 2px 2px;
-    cursor: auto;
+    cursor: sw-resize;
 }
 
 .puzzle-piece.missing {
@@ -145,7 +166,7 @@ a {
     background-size: 578px auto;
     background-position: 2px 2px;
     background-image: url('../assets/smol_puzzle_missing.svg');
-    cursor: auto;
+    cursor: sw-resize;
 }
 
 .code-container {
@@ -257,12 +278,21 @@ button {
     border: 5px solid var(--light-color);
     box-shadow: 10px 10px 0px var(--light-color);
     color: var(--dark-color);
-    cursor: auto;
+    cursor:not-allowed;
     opacity: 0.5;
 }
 .dark-page button:disabled:hover, .nextback-container button:disabled:hover {
     box-shadow: 10px 10px 0px var(--light-color);
     transform: translate(0px, 0px);
+}
+.nextback-container button:disabled:hover::before {
+    content: 'Drag the puzzle piece into the missing spot in the code to continue...';
+    position: absolute;
+    top: -60px;
+    right: -10px;
+    width: 320px;
+    text-align: right;
+    color: var(--light-color);
 }
 .dark-page button:hover, .nextback-container button:hover {
     box-shadow: 0 0 0 var(--main-color);
