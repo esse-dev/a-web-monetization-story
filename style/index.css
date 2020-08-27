@@ -52,6 +52,7 @@ a {
     text-align: left;
 
     padding-bottom: 10px;
+    padding-left: 7px;
 }
 .next-button {
     float: right;
@@ -60,7 +61,7 @@ a {
 .getcode-container {
     grid-row: 5;
     grid-column: 3 / 5;
-    padding-left: 30px;
+    padding-left: 14px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -307,9 +308,10 @@ button {
     background: var(--main-color);
     border: 5px solid var(--main-color);
     color: var(--dark-color);
+    transition: transform  0.2s;
 }
 .getcode-container button:hover {
-    transform: translate(0, -10px) scale(1.1, 1.1);
+    transform: translate(0, 0px) scale(1.1, 1.1);
 }
 .getcode-container button:active {
     background: var(--dark-color);
