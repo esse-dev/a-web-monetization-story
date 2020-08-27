@@ -33,6 +33,31 @@ dragula([
     }
 });
 
+/**
+ * Give a visual hint to the user by animating puzzle pieces when the user is
+ * hovering over a missing puzzle piece element.
+ */
+const puzzlePuzzleEls = Array.from(document.querySelectorAll('.puzzle-piece, .puzzle-piece-big'));
+const missingPuzzleEls = Array.from(document.querySelectorAll('.missing'));
+for (const missingPuzzleEl of missingPuzzleEls) {
+    missingPuzzleEl.addEventListener('mouseenter', () => {
+        for (const puzzleEl of puzzlePuzzleEls) {
+            if (!puzzleEl.classList.contains('missing')) {
+                puzzleEl.style.animationDuration = '2s';
+                puzzleEl.style.animationName = 'pulse';
+            }
+        }
+    });
+    missingPuzzleEl.addEventListener('mouseleave', () => {
+        for (const puzzleEl of puzzlePuzzleEls) {
+            if (!puzzleEl.classList.contains('missing')) {
+                puzzleEl.style.animationDuration = '6s';
+                puzzleEl.style.animationName = 'bounce';
+            }
+        }
+    });
+}
+
 
 /**
  * Control transitions between pages. The current page is encoded in the URL as an id
