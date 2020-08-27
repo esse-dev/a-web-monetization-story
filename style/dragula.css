@@ -6,7 +6,7 @@
     position: fixed !important;
     margin: 0 !important;
     z-index: 9999 !important;
-    transform: rotate(5deg);
+    transform: rotate(5deg) !important;
     cursor: grabbing;
 }
 .gu-hide {

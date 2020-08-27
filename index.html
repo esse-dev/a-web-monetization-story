@@ -12,9 +12,26 @@
     <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
-    <div id="footer" class="light-footer">
+    <nav class="nav-dot-container">
+        <button class="nav-dot nav-house" style="grid-column: 1;" aria-label="go to page 0"></button>
+        <button class="nav-dot" style="grid-column: 2;" disabled aria-label="go to page 1"></button>
+        <button class="nav-dot" style="grid-column: 3;" disabled aria-label="go to page 2"></button>
+        <button class="nav-dot" style="grid-column: 4;" disabled aria-label="go to page 3"></button>
+        <button class="nav-dot" style="grid-column: 5;" disabled aria-label="go to page 4"></button>
+        <button class="nav-dot" style="grid-column: 6;" disabled aria-label="go to page 5"></button>
+        <button class="nav-dot" style="grid-column: 7;" disabled aria-label="go to page 6"></button>
+        <button class="nav-dot" style="grid-column: 8;" disabled aria-label="go to page 7"></button>
+        <button class="nav-dot" style="grid-column: 9;" disabled aria-label="go to page 8"></button>
+        <button class="nav-dot" style="grid-column: 10;" disabled aria-label="go to page 9"></button>
+        <button class="nav-dot" style="grid-column: 11;" disabled aria-label="go to page 10"></button>
+        <button class="nav-dot" style="grid-column: 12;" disabled aria-label="go to page 11"></button>
+        <button class="nav-dot" style="grid-column: 13;" disabled aria-label="go to page 12"></button>
+        <button class="nav-dot" style="grid-column: 14;" disabled aria-label="go to page 13"></button>
+        <img id="nav-dog" src="assets/hapi_boi.svg" aria-hidden="true">
+    </nav>
+    <footer id="footer" class="light-footer">
         <a href="https://github.com/esse-dev/borzoi">Made by Sharon and Elliot</a>
-    </div>
+    </footer>
 
     <!-- BACKSTORY 1 -->
     <div class="page-container dark-page">
@@ -481,7 +498,7 @@
         </pre>
         <nav class="nextback-container">
             <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
-            <button onclick="transitionToPage(0)" class="next-button" tabindex="-1">START AGAIN <span style="font-weight: normal;">↺</span></button>
+            <button onclick="transitionToPage(0)" class="next-button" tabindex="-1" style="font-size: 14px; padding: 15px 20px;">START AGAIN <span style="font-weight: normal;">↺</span></button>
         </nav>
     </div>
 

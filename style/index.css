@@ -263,6 +263,7 @@ button {
     font-weight: 900;
     font-size: 18px;
     margin: 0 14px;
+    height: 63px;
     cursor: pointer;
 }
 
@@ -378,6 +379,73 @@ button {
 .mobile-landing-page-highlight-text {
     color: var(--main-color);
 }
+
+.getcode-copy-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.getcode-copy-feedback-image {
+    display: block;
+    max-width: 150px;
+    margin: -170px 0px 20px 0px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+.nav-dot-container {
+    grid-template-columns: repeat(14, 1fr);
+    display: grid;
+    position: fixed;
+    width: calc(100vw - 880px);
+    height: 50px;
+
+    bottom: 22px;
+    right: 180px;
+}
+
+.nav-dot {
+    background: url("../assets/circle.svg");
+    background-size: 13px 13px;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-dot:hover {
+    transform: scale(1.5, 1.5);
+    opacity: 0.9;
+}
+.nav-dot:disabled {
+    cursor: auto;
+    opacity: 0.1;
+}
+.nav-dot:focus {
+    outline: none;
+    transform: scale(1.5, 1.5);
+    opacity: 0.9;
+}
+.nav-dot:disabled:hover {
+    transform: scale(1, 1);
+    opacity: 0.1;
+}
+.nav-house {
+    background: url("../assets/house_icon.svg");
+    background-size: 25px 25px;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#nav-dog {
+    position: absolute;
+    height: 50px;
+    transition: left 0.3s;
+}
+
 @media (max-width: 1000px) {
     .mobile-landing-page {
         display: block;
@@ -389,6 +457,9 @@ button {
 @media (min-width: 1600px) {
     .page-container {
         grid-template-columns: 0 600px 1fr 7vh;
+    }
+    .nav-dot-container {
+        width: calc(100vw - 980px);
     }
     .auden-avatar {
         height: 150px;
@@ -415,18 +486,4 @@ button {
     .syntax-newcode {
         height: 20px;
     }
-}
-
-.getcode-copy-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.getcode-copy-feedback-image {
-    display: block;
-    max-width: 150px;
-    margin: -170px 0px 20px 0px;
-    opacity: 0;
-    transition: opacity 0.2s ease-in;
 }
