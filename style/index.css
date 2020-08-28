@@ -406,8 +406,7 @@ button {
 .landing-page-text-container p {
     margin: 0;
     font-size: 30px;
-    text-align: justify;
-    text-justify: inter-word;
+    letter-spacing: 2px;
 }
 
 .landing-page-puzzle-grid {
@@ -431,6 +430,7 @@ button {
 .landing-page-puzzlespot-container {
     grid-column: 2;
     grid-row: 1 / 2;
+    position: relative;
 }
 
 .landing-page-puzzlepiece {
@@ -456,18 +456,13 @@ button {
 
 #drag-to-start-story-div {
     position: absolute;
-    right: 300px;
-    bottom: 90px;
+    right: 140px;
+    bottom: -100px;
     transition: opacity 0.3s;
+    pointer-events: none;
 }
 #drag-to-start-story-div img{
     width: 320px;
-    user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
 }
 
 .landing-page-nextback-container {
@@ -606,5 +601,39 @@ button {
     }
     .syntax-newcode {
         height: 20px;
+    }
+
+    .landing-page-avatar-container {
+        grid-column: 2;
+        grid-row: 2 / 4;
+        align-self: center;
+        max-height: 296px;
+    }
+    .landing-page-avatar-container img {
+        height: 296px;
+    }
+    .landing-page-text-container h1 {
+        font-size: 100px;
+    }
+    .landing-page-text-container p {
+        font-size: 32px;
+        letter-spacing: 7.5px;
+    }
+    .landing-page-puzzle-grid {
+        grid-row: 3 / 6;
+    }
+    .landing-page-puzzlepiece {
+        width: 310px;
+        height: 90px;
+        background-size: 310px 90px;
+        line-height: 90px;
+        font-size: 24px;
+    }
+    #drag-to-start-story-div {
+        right: 150px;
+        bottom: -135px;
+    }
+    #drag-to-start-story-div img {
+        width: 460px;
     }
 }
