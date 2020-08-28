@@ -278,10 +278,6 @@ a {
     margin: 0 auto;
 
     border-radius: 100%;
-    border: 6px solid var(--dark-color);
-}
-.dark-page .auden-avatar {
-    border: 6px solid var(--light-color);
 }
 
 button {
