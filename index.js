@@ -79,10 +79,7 @@ window.addEventListener('popstate', showPageInURL);
 document.fonts.ready.then(showPageInURL);
 // Page was getting scrolled halfway between pages when resizing, transitionToPageInURL should
 // handle scrolling back to the proper position once the resize happens.
-window.addEventListener('resize', () => {
-    const currentPageEl = pageEls[currentPageNum];
-    currentPageEl.scrollIntoView();
-});
+window.addEventListener('resize', () => showPage(currentPageNum));
 
 function showPageInURL() {
     // Get the page number encoded in the URL. If there is no page in the URL, default to 0.
@@ -152,6 +149,14 @@ function transitionToPreviousPage() {
     }
 }
 
+const navDotEls = Array.from(document.getElementsByClassName('nav-dot'));
+for (let i = 0; i < navDotEls.length; i++) {
+    const navDotEl = navDotEls[i];
+    navDotEl.addEventListener('click', () => {
+        transitionToPage(i, true);
+    });
+}
+
 // showPage is used by transitionToPage and transitionToPageInURL
 // not recommended to be called manually!
 function showPage(nextPageNum, reverseAnimation = false) {
@@ -178,6 +183,19 @@ function showPage(nextPageNum, reverseAnimation = false) {
         }
         animatedEl.style.opacity = 1;
         delay += 0.1;
+    }
+
+    const navEl = document.getElementsByClassName('nav-dot-container')[0];
+    const navDogEl = document.getElementById('nav-dog');
+    const navDotWidth = navEl.offsetWidth / 14;
+    navDogEl.style.left =  (navDotWidth/2 + navDotWidth*currentPageNum - 25) + 'px';
+
+    let navDotCounter = 0;
+    for (const navDotEl of navDotEls) {
+        if (navDotCounter <= currentPageNum) {
+            navDotEl.removeAttribute('disabled');
+        }
+        navDotCounter++;
     }
 
     if (!nextPageEl.querySelector('.page-light-background')) {
