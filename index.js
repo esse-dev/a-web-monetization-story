@@ -220,9 +220,14 @@ function showPage(nextPageNum, reverseAnimation = false) {
     }
 
     const navEl = document.getElementsByClassName('nav-dot-container')[0];
+
+    // Hide the navigation element on the landing page
+    navEl.style.opacity = (currentPageNum === 0) ? 0 : 1;
+
     const navDogEl = document.getElementById('nav-dog');
-    const navDotWidth = navEl.offsetWidth / 14;
-    navDogEl.style.left =  (navDotWidth/2 + navDotWidth*currentPageNum - 25) + 'px';
+    const navDotWidth = navEl.offsetWidth / 15;
+    const navDogElOffset = 19; // higher number = move further left
+    navDogEl.style.left =  (navDotWidth/2 + navDotWidth*currentPageNum - navDogElOffset) + 'px';
 
     let navDotCounter = 0;
     for (const navDotEl of navDotEls) {

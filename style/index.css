@@ -514,19 +514,20 @@ button {
 }
 
 .nav-dot-container {
-    grid-template-columns: repeat(14, 1fr);
+    grid-template-columns: repeat(15, 1fr);
     display: grid;
     position: fixed;
     width: calc(100vw - 880px);
     height: 50px;
-
     bottom: 22px;
     right: 180px;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .nav-dot {
     background: url("../assets/circle.svg");
-    background-size: 13px 13px;
+    background-size: 8px 8px;
     opacity: 0.5;
     background-repeat: no-repeat;
     background-position: center;
@@ -554,14 +555,15 @@ button {
 }
 .nav-house {
     background: url("../assets/house_icon.svg");
-    background-size: 25px 25px;
+    background-size: 20px 20px;
     opacity: 0.5;
     background-repeat: no-repeat;
     background-position: center;
 }
 #nav-dog {
     position: absolute;
-    height: 50px;
+    height: 35px;
+    margin-top: 13px;
     transition: left 0.3s;
 }
 
