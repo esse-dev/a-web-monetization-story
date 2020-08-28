@@ -8,6 +8,7 @@
     z-index: 9999 !important;
     transform: rotate(5deg) !important;
     cursor: grabbing;
+    animation: none;
 }
 .gu-hide {
     display: none !important;

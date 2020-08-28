@@ -67,6 +67,33 @@ a {
     justify-content: center;
     align-items: flex-start;
 }
+.getcode-container button {
+    background: var(--main-color);
+    border: 5px solid var(--main-color);
+    color: var(--dark-color);
+}
+.getcode-container button:hover {
+    transform: translate(0, -10px) scale(1.1, 1.1);
+}
+.getcode-container button:active {
+    background: var(--dark-color);
+    color: var(--main-color);
+    border: 5px solid var(--main-color);
+}
+
+.getcode-copy-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.getcode-copy-feedback-image {
+    display: block;
+    max-width: 150px;
+    margin: -170px 0px 20px 0px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
 
 .page-avatar-container {
     grid-column: 2;
@@ -355,6 +382,98 @@ button {
     background: #25F2A8;
 }
 
+.landing-page-avatar-container {
+    grid-column: 2;
+    grid-row: 2 / 4;
+    align-self: center;
+    max-height: 256px;
+}
+.landing-page-avatar-container img {
+    height: 256px;
+}
+
+.landing-page-text-container {
+    color: var(--light-color);
+    grid-column: 3;
+    grid-row: 2 / 4;
+    align-self: center;
+}
+.landing-page-text-container h1 {
+    font-size: 70px;
+    font-family: 'Fira Code', monospace;
+    margin: 0;
+}
+.landing-page-text-container p {
+    margin: 0;
+    font-size: 30px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.landing-page-puzzle-grid {
+    grid-column: 3;
+    grid-row: 4 / 6;
+
+    align-self: center;
+    display: grid;
+    justify-items: left;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.landing-page-puzzlepiece-container {
+    grid-column: 1;
+    grid-row: 1 / 2;
+    height: 100%;
+    width: 100%;
+}
+
+.landing-page-puzzlespot-container {
+    grid-column: 2;
+    grid-row: 1 / 2;
+}
+
+.landing-page-puzzlepiece {
+    width: 250px;
+    height: 60px;
+    background-image: url('../assets/even_smoller_puzzle.svg');
+    background-size: 250px 60px;
+    background-repeat: no-repeat;
+    cursor: grab;
+
+    color: var(--dark-color);
+    text-align: center;
+    line-height: 60px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+}
+.landing-page-puzzlepiece.missing {
+    background-image: url('../assets/even_smoller_puzzle_missing.svg');
+    cursor: w-resize;
+    animation: none;
+}
+
+#drag-to-start-story-div {
+    position: absolute;
+    right: 300px;
+    bottom: 90px;
+    transition: opacity 0.3s;
+}
+#drag-to-start-story-div img{
+    width: 320px;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.landing-page-nextback-container {
+    opacity: 0;
+}
+
 /* Mobile/small screen/large screen styling */
 .mobile-landing-page {
     color: var(--light-color);
@@ -395,19 +514,20 @@ button {
 }
 
 .nav-dot-container {
-    grid-template-columns: repeat(14, 1fr);
+    grid-template-columns: repeat(15, 1fr);
     display: grid;
     position: fixed;
     width: calc(100vw - 880px);
     height: 50px;
-
     bottom: 22px;
     right: 180px;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .nav-dot {
     background: url("../assets/circle.svg");
-    background-size: 13px 13px;
+    background-size: 8px 8px;
     opacity: 0.5;
     background-repeat: no-repeat;
     background-position: center;
@@ -435,14 +555,15 @@ button {
 }
 .nav-house {
     background: url("../assets/house_icon.svg");
-    background-size: 25px 25px;
+    background-size: 20px 20px;
     opacity: 0.5;
     background-repeat: no-repeat;
     background-position: center;
 }
 #nav-dog {
     position: absolute;
-    height: 50px;
+    height: 35px;
+    margin-top: 13px;
     transition: left 0.3s;
 }
 

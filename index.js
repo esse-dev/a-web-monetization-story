@@ -1,13 +1,18 @@
+const landing_page_puzzlepiece_container = 'landing-page-puzzlepiece-container';
+const drag_to_start_story_div = 'drag-to-start-story-div';
+
 /**
  * Enable drag and drop using the Dragula library
  */
-dragula([
+const draggables = dragula([
     /**
      * Adding all the elements to the same dragula might actually allow
      * any puzzle piece to get dragged and dropped into any puzzlespot,
      * but since all puzzle piece + spot pairs are on "separate pages",
      * this will work for our purposes.
      */
+    document.getElementById('landing-page-puzzlepiece-container'),
+    document.getElementById('landing-page-puzzlespot'),
     document.getElementById('step-1-puzzlepiece-container'),
     document.getElementById('step-1-puzzlespot'),
     document.getElementById('step-2-puzzlepiece-container'),
@@ -18,18 +23,47 @@ dragula([
     document.getElementById('step-4-part-1-puzzlespot'),
     document.getElementById('step-4-part-2-puzzlepiece-container'),
     document.getElementById('step-4-part-2-puzzlespot')
-])
-.on('drop', function (el, source, target, sibling) {
+]);
+
+draggables.on('drag', function(el, source) {
+    // Hide the "drag to start" when the BEGIN puzzle piece is dragged
+    if (source.id === landing_page_puzzlepiece_container) {
+        document.getElementById(drag_to_start_story_div).style.opacity = 0;
+    }
+});
+
+draggables.on('cancel', function (el, container, source) {
+    // Show the "drag to start" when the BEGIN puzzle piece is dragged and dropped outside a dragula container
+    if (source.id === landing_page_puzzlepiece_container) {
+        document.getElementById(drag_to_start_story_div).style.opacity = 1;
+    }
+});
+
+draggables.on('drop', function (el, source, target, sibling) {
     // console.log("element", el); // The draggable puzzle piece
     // console.log("source", source); // The missing puzzle piece div is the source for some reason
     // console.log("target", target); // The container holding the puzzle piece is the target for some reason
-    if (source.classList.contains('puzzle-piece') ||
+
+    // Transition to the next page
+    const isLandingPagePuzzlePiece = source.classList.contains('landing-page-puzzlepiece');
+    if (isLandingPagePuzzlePiece ||
+        source.classList.contains('puzzle-piece') ||
         source.classList.contains('puzzle-piece-big') &&
-        source.classList.contains('missing')) {
+        source.classList.contains('missing')
+    ) {
+        // Go to the next page and disable the next button on the following page
         setTimeout(() => {
             transitionToNextPage();
             target.parentElement.querySelector('.next-button')?.removeAttribute('disabled');
         }, 400);
+
+        // Hide the puzzle piece and show the BEGIN button instead once the user navigates past the landing page
+        setTimeout(() => {
+            if (isLandingPagePuzzlePiece) {
+                document.getElementById('landing-page-nextback-container').style.opacity = 1;
+                document.getElementById('landing-page-puzzle-grid').style.display = 'none';
+            }
+        }, 500);
     }
 });
 
@@ -136,7 +170,7 @@ function transitionToPage(nextPageNum, reverseAnimation = false) {
     }, isPageAnimatingOut ? totalPageAnimateOutTime + 200 : 20);
 }
 
-const MAX_PAGE_NUM = 13;
+const MAX_PAGE_NUM = 14;
 function transitionToNextPage() {
     if (currentPageNum < MAX_PAGE_NUM) {
         transitionToPage(currentPageNum + 1);
@@ -186,9 +220,14 @@ function showPage(nextPageNum, reverseAnimation = false) {
     }
 
     const navEl = document.getElementsByClassName('nav-dot-container')[0];
+
+    // Hide the navigation element on the landing page
+    navEl.style.opacity = (currentPageNum === 0) ? 0 : 1;
+
     const navDogEl = document.getElementById('nav-dog');
-    const navDotWidth = navEl.offsetWidth / 14;
-    navDogEl.style.left =  (navDotWidth/2 + navDotWidth*currentPageNum - 25) + 'px';
+    const navDotWidth = navEl.offsetWidth / 15;
+    const navDogElOffset = 19; // higher number = move further left
+    navDogEl.style.left =  (navDotWidth/2 + navDotWidth*currentPageNum - navDogElOffset) + 'px';
 
     let navDotCounter = 0;
     for (const navDotEl of navDotEls) {
