@@ -28,6 +28,7 @@
         <button class="nav-dot" style="grid-column: 13;" disabled aria-label="go to page 12"></button>
         <button class="nav-dot" style="grid-column: 14;" disabled aria-label="go to page 13"></button>
         <button class="nav-dot" style="grid-column: 15;" disabled aria-label="go to page 14"></button>
+        <button class="nav-dot" style="grid-column: 16;" disabled aria-label="go to page 15"></button>
         <img id="nav-dog" src="assets/hapi_boi.svg" aria-hidden="true">
     </nav>
     <footer id="footer" class="light-footer">
@@ -71,7 +72,7 @@
             </p>
         </div>
         <div class="code-container animate-in">
-            <img src="assets/polaroid.svg" height="500px" alt="Illustration of a polaroid photo of Auden and Chicken">
+            <img src="assets/blog.svg" height="500px" alt="Illustration of Auden's blog">
         </div>
         <div class="nextback-container">
             <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
@@ -139,8 +140,8 @@
             </p>
         </div>
         <div class="code-container animate-out">
-            <img src="assets/polaroid.svg" height="400px" style="float: left;" alt="Illustration of a polaroid photo of Auden and Chicken">
-            <object type="image/svg+xml" data="assets/wm-icon-animated.svg" height="250px" style="float: left;" tabindex="-1"></object>
+            <img src="assets/blog.svg" height="400px" style="float: left;" alt="Illustration of a Auden's blog">
+            <object type="image/svg+xml" data="assets/wm-icon-animated.svg" height="250px" style="float: left; margin-left: -50px;" tabindex="-1"></object>
         </div>
         <div class="nextback-container">
             <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
@@ -157,10 +158,12 @@
         <div class="page-text animate-in">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
-                All I had to do to enable Web Monetization on my site was add the <span style="color: #FFB566;">monetization meta tag</span>.
+                All I had to do to enable Web Monetization on my site was add the 
+                <a href="https://webmonetization.org/docs/getting-started#3-create-your-meta-tag">monetization meta tag</a> 
+                with my <a href="https://webmonetization.org/docs/ilp-wallets#payment-pointers">payment pointer</a> inside.
                 <br>
                 <br>
-                Try it for yourself! :) Drag the <span class="code-font">&lt;meta&gt;</span> tag below into the 
+                Try it for yourself :) Drag the <span class="code-font">&lt;meta&gt;</span> tag below into the 
                 <span class="code-font">&lt;head&gt;</span> tag in the html on the right.
             </p>
         </div>
@@ -206,6 +209,37 @@
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
 <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">html</span><span class="syntax-htmltagpunctuation">&gt;</span>
+<img src="assets/thanks_illustration.svg" class="thanks-illustration" alt="Illustration of a blog reader sending money to Auden. Auden says 'thanks!'">
+        </pre>
+        <div class="nextback-container">
+            <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
+            <button onclick="transitionToNextPage()" class="next-button" tabindex="-1">NEXT →</button>
+        </div>
+    </div>
+
+    <!-- STEP 1 CONFIRMATION PART 2-->
+    <div class="page-container">
+        <div class="page-light-background"></div>
+        <div class="page-avatar-container animate-out">
+            <img src="assets/auden.svg" class="auden-avatar" aria-hidden="true">
+        </div>
+        <div class="page-text animate-out">
+            <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
+            <p>
+                Including this one line of code allows visitors of my website to stream money to me via a <a href="https://coil.com/">Web Monetization Provider</a>.
+            </p>
+        </div>
+        <pre class="code-container">
+<span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+    <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
+<span><span class="syntax-newcode"></span>        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span></span>
+    <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
+    <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
+    <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
+<span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">html</span><span class="syntax-htmltagpunctuation">&gt;</span>
+<img src="assets/thanks_illustration.svg" class="thanks-illustration" alt="Illustration of a blog reader sending money to Auden. Auden says 'thanks!'">
         </pre>
         <div class="nextback-container">
             <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
