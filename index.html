@@ -141,7 +141,7 @@
         </div>
         <div class="code-container animate-out">
             <img src="assets/blog.svg" height="400px" style="float: left;" alt="Illustration of a Auden's blog">
-            <object type="image/svg+xml" data="assets/wm-icon-animated.svg" height="250px" style="float: left; margin-left: -50px;" tabindex="-1"></object>
+            <object type="image/svg+xml" data="assets/wm-icon-animated.svg" height="250px" style="float: left;" tabindex="-1"></object>
         </div>
         <div class="nextback-container">
             <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
@@ -190,13 +190,17 @@
     <!-- STEP 1 CONFIRMATION -->
     <div class="page-container">
         <div class="page-light-background"></div>
-        <div class="page-avatar-container animate-out">
+        <div class="page-avatar-container">
             <img src="assets/auden.svg" class="auden-avatar" aria-hidden="true">
         </div>
-        <div class="page-text animate-out">
+        <div class="page-text">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
-                Including this one line of code allows visitors of my website to stream money to me via a <a href="https://coil.com/">Web Monetization Provider</a>.
+                Now that I've included this single line of code, visitors of my website who use a
+                Web Monetization Provider (such as <a href="https://coil.com/">coil</a>) stream money to me. This meta tag
+                is all you need to have a <strong>Web Monetized site</strong>!
+                <br><br>
+                From here, I added a little Web Monetization feature to my site that I’d like to show you...
             </p>
         </div>
         <pre class="code-container">
@@ -209,7 +213,9 @@
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
 <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">html</span><span class="syntax-htmltagpunctuation">&gt;</span>
-<img src="assets/thanks_illustration.svg" class="thanks-illustration" alt="Illustration of a blog reader sending money to Auden. Auden says 'thanks!'">
+<span class="thanks-illustration">
+    <img src="assets/thanks_illustration.svg" alt="Illustration of a blog reader sending money to Auden. Auden says 'thanks!'">
+</span>
         </pre>
         <div class="nextback-container">
             <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
@@ -226,7 +232,10 @@
         <div class="page-text animate-out">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
-                Including this one line of code allows visitors of my website to stream money to me via a <a href="https://coil.com/">Web Monetization Provider</a>.
+                The rest of the tutorial will show you how I used some more <a href="https://webmonetization.org/docs/api">Web Monetization API</a>
+                features to add a "thank you" note to my site. This "thank you" note is shown to 
+                my visitors who support me through Web Monetization! Let's get started on the 
+                second part of the tutorial!
             </p>
         </div>
         <pre class="code-container">
@@ -239,7 +248,9 @@
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
 <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">html</span><span class="syntax-htmltagpunctuation">&gt;</span>
-<img src="assets/thanks_illustration.svg" class="thanks-illustration" alt="Illustration of a blog reader sending money to Auden. Auden says 'thanks!'">
+<span class="thanks-illustration">
+    <img src="assets/thanks_illustration.svg" alt="Illustration of a blog reader sending money to Auden. Auden says 'thanks!'">
+</span>
         </pre>
         <div class="nextback-container">
             <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
@@ -256,9 +267,10 @@
         <div class="page-text animate-in">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
-                I know if a visitor is using Web Monetization if the <span class="code-font">document.monetization</span> object exists.
-
-                Let’s add a check in the <span class="code-font">&lt;script&gt;</span> tag to detect the object!
+                I know if a visitor is using Web Monetization if the 
+                <a class="code-font" href="https://webmonetization.org/docs/api#documentmonetization">document.monetization</a> object exists.
+                <br>
+                Let’s add an empty check in the <span class="code-font">&lt;script&gt;</span> tag to detect the object!
             </p>
         </div>
         <div id="step-2-puzzlepiece-container" class="puzzlepiece-container animate-in">
@@ -294,6 +306,9 @@
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 I can use this check to customize the website experience if a visitor is using Web Monetization.
+                <br><br>
+                We'll add some simple code inside the 
+                <br><span class="code-font">if (document.monetization) {} </span>check in the next steps.
             </p>
         </div>
         <pre class="code-container">
