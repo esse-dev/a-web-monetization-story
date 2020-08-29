@@ -170,7 +170,15 @@ function transitionToPage(nextPageNum, reverseAnimation = false) {
     }, isPageAnimatingOut ? totalPageAnimateOutTime + 200 : 20);
 }
 
-const MAX_PAGE_NUM = 14;
+const navDotEls = Array.from(document.getElementsByClassName('nav-dot'));
+for (let i = 0; i < navDotEls.length; i++) {
+    const navDotEl = navDotEls[i];
+    navDotEl.addEventListener('click', () => {
+        transitionToPage(i, true);
+    });
+}
+
+const MAX_PAGE_NUM = navDotEls.length - 1;
 function transitionToNextPage() {
     if (currentPageNum < MAX_PAGE_NUM) {
         transitionToPage(currentPageNum + 1);
@@ -181,14 +189,6 @@ function transitionToPreviousPage() {
     if (currentPageNum > 0) {
         transitionToPage(currentPageNum - 1, true);
     }
-}
-
-const navDotEls = Array.from(document.getElementsByClassName('nav-dot'));
-for (let i = 0; i < navDotEls.length; i++) {
-    const navDotEl = navDotEls[i];
-    navDotEl.addEventListener('click', () => {
-        transitionToPage(i, true);
-    });
 }
 
 // showPage is used by transitionToPage and transitionToPageInURL
@@ -225,7 +225,7 @@ function showPage(nextPageNum, reverseAnimation = false) {
     navEl.style.opacity = (currentPageNum === 0) ? 0 : 1;
 
     const navDogEl = document.getElementById('nav-dog');
-    const navDotWidth = navEl.offsetWidth / 15;
+    const navDotWidth = navEl.offsetWidth / navDotEls.length;
     const navDogElOffset = 19; // higher number = move further left
     navDogEl.style.left =  (navDotWidth/2 + navDotWidth*currentPageNum - navDogElOffset) + 'px';
 
