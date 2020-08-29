@@ -378,6 +378,10 @@ button {
     background: #25F2A8;
 }
 
+.syntax-semibold {
+    font-weight: 600;
+}
+
 .landing-page-avatar-container {
     grid-column: 2;
     grid-row: 2 / 4;
@@ -505,6 +509,7 @@ button {
 }
 
 .nav-dot-container {
+    /* grid-template-columns: repeat(17, 1fr); */
     grid-template-columns: repeat(16, 1fr);
     display: grid;
     position: fixed;
@@ -567,6 +572,12 @@ button {
 }
 .thanks-illustration img {
     width: 420px;
+    display: block;
+    margin: 0 auto;
+}
+
+.thanks-illustration-blog img {
+    height: 240px;
     display: block;
     margin: 0 auto;
 }
@@ -653,5 +664,8 @@ button {
     }
     .thanks-illustration img {
         width: 575px;
+    }
+    .thanks-illustration-blog img {
+        height: 330px;
     }
 }
