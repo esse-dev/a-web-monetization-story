@@ -263,6 +263,7 @@ a {
     height: 100px;
     display: block;
     margin: 0 auto;
+    background: var(--main-color);
 
     border-radius: 100%;
 }
@@ -320,7 +321,7 @@ button {
     background: var(--main-color);
     border: 5px solid var(--main-color);
     color: var(--dark-color);
-    transition: transform  0.2s;
+    transition: transform 0.2s;
 }
 .utility-button:hover {
     transform: scale(1.1, 1.1);
@@ -483,6 +484,32 @@ button {
     grid-column: 2;
     grid-row: 3 / 5;
 }
+.auden-chaser {
+    offset-path: path('M47.1163 172.731C1.98749 142.086 -15.1629 105.131 19.1358 48.3469C53.4345 -8.43727 119.323 -8.43727 186.116 16.8001C252.91 42.0375 305.258 203.377 408.155 189.857C511.052 176.337 565.206 143.888 563.402 94.315C561.598 44.7415 560 29.6003 530 16.8001C500 4 450.578 36.6295 379.272 58.2616C307.966 79.8937 302.552 188.955 227.636 203.377C152.719 217.798 92.2451 203.377 47.1163 172.731Z');
+    animation: move 6000ms infinite linear;
+    animation-delay: 700ms;
+    offset-rotate: 0deg;
+    height: 160px;
+    position: absolute;
+    left: -80px;
+}
+.chicken-chaser {
+    offset-path: path('M47.1163 172.731C1.98749 142.086 -15.1629 105.131 19.1358 48.3469C53.4345 -8.43727 119.323 -8.43727 186.116 16.8001C252.91 42.0375 305.258 203.377 408.155 189.857C511.052 176.337 565.206 143.888 563.402 94.315C561.598 44.7415 560 29.6003 530 16.8001C500 4 450.578 36.6295 379.272 58.2616C307.966 79.8937 302.552 188.955 227.636 203.377C152.719 217.798 92.2451 203.377 47.1163 172.731Z');
+    animation: move 6000ms infinite linear;
+    height: 100px;
+    offset-rotate: 0deg;
+    position: absolute;
+    left: -80px;
+}
+@keyframes move {
+    0% {
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+}
+
 .thankyou-page-container nav {
     grid-column: 2;
     grid-row: 5;
@@ -610,6 +637,9 @@ button {
 @media (min-width: 1600px) {
     .page-container {
         grid-template-columns: 0 600px 1fr 7vh;
+    }
+    .thankyou-page-container {
+        grid-template-columns: 0.1fr 1fr 0.1fr;
     }
     .nav-dot-container {
         width: calc(100vw - 980px);

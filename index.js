@@ -167,7 +167,7 @@ function transitionToPage(nextPageNum, reverseAnimation = false) {
     setTimeout(() => {
         window.location.href = '#page-' + nextPageNum;
         // Showing the next page is handled by the popstate listener
-    }, isPageAnimatingOut ? totalPageAnimateOutTime + 200 : 20);
+    }, isPageAnimatingOut ? totalPageAnimateOutTime + 400 : 20);
 }
 
 const navDotEls = Array.from(document.getElementsByClassName('nav-dot'));
