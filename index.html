@@ -41,17 +41,17 @@
         <div class="landing-page-avatar-container animate-in animate-out">
             <img src="assets/auden.svg" class="auden-avatar">
         </div>
-        <div class="landing-page-text-container">
+        <div class="landing-page-text-container animate-in animate-out">
             <h1 class="animate-out">Hi, I’m Auden</h1>
             <p class="animate-out">and here’s my <span class="syntax-string">Web Monetization</span> story</p>
         </div>
-        <div id="landing-page-puzzle-grid" class="landing-page-puzzle-grid" class="animate-out">
-            <div id="landing-page-puzzlepiece-container" class="landing-page-puzzlepiece-container">
+        <div id="landing-page-puzzle-grid" class="landing-page-puzzle-grid">
+            <div id="landing-page-puzzlepiece-container" class="landing-page-puzzlepiece-container animate-in animate-out">
                 <div class="landing-page-puzzlepiece">BEGIN</div>
             </div>
             <div class="landing-page-puzzlespot-container">
-                <div id="landing-page-puzzlespot" class="landing-page-puzzlepiece missing"></div>
-                <div id="drag-to-start-story-div">
+                <div id="landing-page-puzzlespot" class="landing-page-puzzlepiece missing animate-in animate-out"></div>
+                <div id="drag-to-start-story-div" class="animate-in animate-out">
                     <img src="assets/drag_to_start_story.svg" onmousedown="event.preventDefault()">
                 </div>
             </div>
@@ -72,7 +72,7 @@
                 I run a blog about my adventures with <strong>Chicken</strong> — my dog!
             </p>
         </div>
-        <div class="code-container animate-in">
+        <div class="code-container animate-in animate-out">
             <img src="assets/blog.svg" height="500px" alt="Illustration of Auden's blog">
         </div>
         <div class="nextback-container">
@@ -94,10 +94,8 @@
                 and I am always looking for ways to better support myself financially.
             </p>
         </div>
-        <div class="code-container">
+        <div class="code-container animate-in animate-out">
             <img src="assets/polaroid.svg" height="500px" alt="Illustration of a polaroid photo of Auden and Chicken">
-            <!-- <img src="assets/polaroid.svg" height="400px" style="float: left;" alt="Illustration of a polaroid photo of Auden and Chicken"> -->
-            <!-- Add in Auden's blog preview; above line is sized/placed to sit beside another image -->
         </div>
         <div class="nextback-container">
             <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
@@ -120,7 +118,7 @@
                 website monetization model.
             </p>
         </div>
-        <div class="code-container">
+        <div class="code-container animate-in animate-out">
             <object type="image/svg+xml" data="assets/wm-icon-animated.svg" height="500px" tabindex="-1"></object>
         </div>
         <div class="nextback-container">
@@ -141,7 +139,7 @@
                 for readers to send me <strong>micropayments</strong> as they spend time on my blog.
             </p>
         </div>
-        <div class="code-container animate-out">
+        <div class="code-container animate-in animate-out">
             <img src="assets/blog.svg" height="400px" style="float: left;" alt="Illustration of a Auden's blog">
             <object type="image/svg+xml" data="assets/wm-icon-animated.svg" height="250px" style="float: left;" tabindex="-1"></object>
         </div>
@@ -171,7 +169,7 @@
         <div id="step-1-puzzlepiece-container" class="puzzlepiece-container animate-in">
             <pre class="puzzle-piece">&lt;meta name=&quot;monetization&quot; content=&quot;MY_PAYMENT_POINTER&quot;&gt;</pre>
         </div>
-        <pre class="code-container">
+        <pre class="code-container animate-in">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <div id="step-1-puzzlespot" class="puzzle-piece missing"></div>
@@ -194,7 +192,7 @@
         <div class="page-avatar-container">
             <img src="assets/auden.svg" class="auden-avatar" aria-hidden="true">
         </div>
-        <div class="page-text">
+        <div class="page-text animate-out">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 Now that I've included this single line of code, visitors of my website who use a
@@ -216,7 +214,7 @@
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
 <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">html</span><span class="syntax-htmltagpunctuation">&gt;</span>
-<img class="thanks-illustration" src="assets/thanks_illustration.svg" alt="Illustration of a blog reader sending money to Auden. Auden says 'thanks!'">
+<img class="thanks-illustration animate-in" src="assets/thanks_illustration.svg" alt="Illustration of a blog reader sending money to Auden. Auden says 'thanks!'">
         </pre>
         <div class="nextback-container">
             <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
@@ -227,10 +225,10 @@
     <!-- STEP 1 CONFIRMATION PART 2-->
     <div class="page-container">
         <div class="page-light-background"></div>
-        <div class="page-avatar-container animate-out">
+        <div class="page-avatar-container">
             <img src="assets/auden.svg" class="auden-avatar" aria-hidden="true">
         </div>
-        <div class="page-text animate-out">
+        <div class="page-text animate-in">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 The rest of the tutorial will show you how I used some more <a href="https://webmonetization.org/docs/api" target="_blank">Web Monetization API</a>
@@ -243,14 +241,14 @@
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-<span><span class="syntax-newcode"></span>        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span></span>
+<span>        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span></span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
 <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">html</span><span class="syntax-htmltagpunctuation">&gt;</span>
-<img class="thanks-illustration" src="assets/thanks_illustration.svg" alt="Illustration of a blog reader sending money to Auden. Auden says 'thanks!'">
+<img class="thanks-illustration animate-out" src="assets/thanks_illustration.svg" alt="Illustration of a blog reader sending money to Auden. Auden says 'thanks!'">
         </pre>
         <div class="nextback-container">
             <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
@@ -261,10 +259,10 @@
     <!-- STEP 2 -->
     <div class="page-container">
         <div class="page-light-background"></div>
-        <div class="page-avatar-container animate-in">
+        <div class="page-avatar-container">
             <img src="assets/auden.svg" class="auden-avatar" aria-hidden="true">
         </div>
-        <div class="page-text animate-in">
+        <div class="page-text">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 I know if a visitor is using Web Monetization if the 
@@ -285,7 +283,7 @@
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
-            <div id="step-2-puzzlespot" class="puzzle-piece-big missing"></div>
+            <div id="step-2-puzzlespot" class="puzzle-piece-big missing animate-in"></div>
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
 <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">html</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -299,10 +297,10 @@
     <!-- STEP 2 CONFIRMATION -->
     <div class="page-container">
         <div class="page-light-background"></div>
-        <div class="page-avatar-container animate-out">
+        <div class="page-avatar-container">
             <img src="assets/auden.svg" class="auden-avatar" aria-hidden="true">
         </div>
-        <div class="page-text animate-out">
+        <div class="page-text">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 I can use this check to customize the website experience if a visitor is using Web Monetization.
@@ -334,10 +332,10 @@
     <!-- STEP 3 -->
     <div class="page-container">
         <div class="page-light-background"></div>
-        <div class="page-avatar-container animate-in">
+        <div class="page-avatar-container">
             <img src="assets/auden.svg" class="auden-avatar" aria-hidden="true">
         </div>
-        <div class="page-text animate-in">
+        <div class="page-text">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 If the <span class="code-font">document.monetization</span> object exists, I can check if a 
@@ -359,7 +357,7 @@
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
             <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">) {</span>
-                <div id="step-3-puzzlespot" class="puzzle-piece-big missing"></div>
+                <div id="step-3-puzzlespot" class="puzzle-piece-big missing animate-in"></div>
             <span class="syntax-plain">}</span>
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -374,10 +372,10 @@
     <!-- STEP 3 CONFIRMATION -->
     <div class="page-container">
         <div class="page-light-background"></div>
-        <div class="page-avatar-container animate-out">
+        <div class="page-avatar-container">
             <img src="assets/auden.svg" class="auden-avatar" aria-hidden="true">
         </div>
-        <div class="page-text animate-out">
+        <div class="page-text">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 I’m so grateful to my website visitors because their support allows me to do 
@@ -416,10 +414,10 @@
     <!-- STEP 4 - PART 1 -->
     <div class="page-container">
         <div class="page-light-background"></div>
-        <div class="page-avatar-container animate-in">
+        <div class="page-avatar-container">
             <img src="assets/auden.svg" class="auden-avatar" aria-hidden="true">
         </div>
-        <div class="page-text animate-in">
+        <div class="page-text">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 I’d like to show a "thank you" note as a token of my appreciation to those sending payment to me.
@@ -439,7 +437,7 @@
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <div id="step-4-part-1-puzzlespot" class="puzzle-piece-big missing"></div>
+        <div id="step-4-part-1-puzzlespot" class="puzzle-piece-big missing animate-in"></div>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
             <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">) {</span>
                 <span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">addEventListener</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;monetizationprogress&#39;</span><span class="syntax-plain">,</span> <span class="syntax-variable">event</span> <span class="syntax-plain">=&gt; {</span>
@@ -486,7 +484,7 @@
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
             <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">) {</span>
                 <span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">addEventListener</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;monetizationprogress&#39;</span><span class="syntax-plain">,</span> <span class="syntax-variable">event</span> <span class="syntax-plain">=&gt; {</span>
-                    <div id="step-4-part-2-puzzlespot" class="puzzle-piece missing"></div>
+                    <div id="step-4-part-2-puzzlespot" class="puzzle-piece missing animate-in"></div>
                 <span class="syntax-plain">});</span>
             <span class="syntax-plain">}</span>
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -514,7 +512,7 @@
                 with micropayments as they read about my adventures with Chicken.
             </p>
         </div>
-        <pre class="code-container animate-out">
+        <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -532,7 +530,7 @@
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
 <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">html</span><span class="syntax-htmltagpunctuation">&gt;</span>
-<img class="thanks-illustration-blog" src="assets/blog_thankyou.svg" alt="Illustration of Auden's blog with a thank you message">
+<img class="thanks-illustration-blog animate-in animate-out" src="assets/blog_thankyou.svg" alt="Illustration of Auden's blog with a thank you message">
 </pre>
         <div class="nextback-container">
             <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
@@ -580,7 +578,7 @@
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
 <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">html</span><span class="syntax-htmltagpunctuation">&gt;</span>
         </pre>
-        <div class="getcode-container">
+        <div class="getcode-container animate-in animate-out">
             <a download href="samples/basic_web_monetization_code.html"><button class="utility-button" tabindex="-1">Download</button></a>
             <div class="getcode-copy-container">
                 <img src="assets/copied.svg" class="getcode-copy-feedback-image" id="copied-code-image" alt="Successful copy icon">
@@ -588,7 +586,7 @@
             </div>
             <a href="https://github.com/esse-dev/borzoi" target="_blank"><button class="utility-button" tabindex="-1">View on GitHub</button></a>
         </div>
-        <nav class="nextback-container">
+        <nav class="nextback-container animate-out">
             <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
             <button onclick="transitionToNextPage()" class="next-button" tabindex="-1">NEXT →</button>
         </nav>

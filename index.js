@@ -63,7 +63,7 @@ draggables.on('drop', function (el, source, target, sibling) {
                 document.getElementById('landing-page-nextback-container').style.opacity = 1;
                 document.getElementById('landing-page-puzzle-grid').style.display = 'none';
             }
-        }, 500);
+        }, 1500);
     }
 });
 
