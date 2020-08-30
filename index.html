@@ -1,5 +1,5 @@
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/dragula.css">
@@ -29,15 +29,15 @@
         <button class="nav-dot" style="grid-column: 14;" disabled aria-label="go to page 13"></button>
         <button class="nav-dot" style="grid-column: 15;" disabled aria-label="go to page 14"></button>
         <button class="nav-dot" style="grid-column: 16;" disabled aria-label="go to page 15"></button>
-        <!-- <button class="nav-dot" style="grid-column: 17;" disabled aria-label="go to page 16"></button> -->
+        <button class="nav-dot" style="grid-column: 17;" disabled aria-label="go to page 16"></button>
         <img id="nav-dog" src="assets/hapi_boi.svg" aria-hidden="true">
     </nav>
     <footer id="footer" class="light-footer">
-        <a href="https://github.com/esse-dev/borzoi">Made by Sharon and Elliot</a>
+        <a href="https://github.com/esse-dev/borzoi" target="_blank">Made by Sharon and Elliot</a>
     </footer>
 
     <!-- LANDING PAGE -->
-    <div class="page-container dark-page landing-page">
+    <div class="page-container dark-page">
         <div class="landing-page-avatar-container animate-in animate-out">
             <img src="assets/auden.svg" class="auden-avatar">
         </div>
@@ -69,7 +69,7 @@
         <div class="page-text animate-in">
             <img src="assets/speech_triangle_light.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
-                I run a blog about my adventures with <span class="syntax-semibold">Chicken</span> — my dog!
+                I run a blog about my adventures with <strong>Chicken</strong> — my dog!
             </p>
         </div>
         <div class="code-container animate-in">
@@ -113,10 +113,10 @@
         <div class="page-text">
             <img src="assets/speech_triangle_light.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
-                Recently, I came across something called <span class="syntax-semibold">Web Monetization</span>. 
+                Recently, I came across something called <strong>Web Monetization</strong>. 
                 It’s a new way for online creators to monetize their sites and for website visitors to 
-                support creators. It seeks to promote a more <span class="syntax-semibold">flexible</span>, 
-                <span class="syntax-semibold">inclusive</span> and <span class="syntax-semibold">privacy-respecting</span> 
+                support creators. It seeks to promote a more <strong>flexible</strong>, 
+                <strong>inclusive</strong> and <strong>privacy-respecting</strong> 
                 website monetization model.
             </p>
         </div>
@@ -138,7 +138,7 @@
             <img src="assets/speech_triangle_light.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 I thought it would be cool to experiment with Web Monetization, which makes it possible 
-                for readers to send me <span class="syntax-semibold">micropayments</span> as they spend time on my blog.
+                for readers to send me <strong>micropayments</strong> as they spend time on my blog.
             </p>
         </div>
         <div class="code-container animate-out">
@@ -161,8 +161,8 @@
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 All I had to do to enable Web Monetization on my site was add the 
-                <a href="https://webmonetization.org/docs/getting-started#3-create-your-meta-tag">monetization meta tag</a> 
-                with my <a href="https://webmonetization.org/docs/ilp-wallets#payment-pointers">payment pointer</a> inside.
+                <a href="https://webmonetization.org/docs/getting-started#3-create-your-meta-tag" target="_blank">monetization meta tag</a> 
+                with my <a href="https://webmonetization.org/docs/ilp-wallets#payment-pointers" target="_blank">payment pointer</a> inside.
                 <br><br>
                 Try it for yourself :) Drag the <span class="code-font">&lt;meta&gt;</span> tag below into the 
                 <span class="code-font">&lt;head&gt;</span> tag in the html on the right.
@@ -198,10 +198,10 @@
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 Now that I've included this single line of code, visitors of my website who use a
-                <span class="syntax-semibold">Web Monetization Provider</span> 
-                (such as <a href="https://coil.com/">Coil</a>) 
+                <strong>Web Monetization Provider</strong> 
+                (such as <a href="https://coil.com/" target="_blank">Coil</a>) 
                 stream money to me. This meta tag is all you need to have a 
-                <span class="syntax-semibold">Web Monetized site</span>!
+                <strong>Web Monetized site</strong>!
                 <br><br>
                 From here, I added a little Web Monetization feature to my site that I’d like to show you...
             </p>
@@ -216,9 +216,7 @@
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
 <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">html</span><span class="syntax-htmltagpunctuation">&gt;</span>
-<span class="thanks-illustration">
-    <img src="assets/thanks_illustration.svg" alt="Illustration of a blog reader sending money to Auden. Auden says 'thanks!'">
-</span>
+<img class="thanks-illustration" src="assets/thanks_illustration.svg" alt="Illustration of a blog reader sending money to Auden. Auden says 'thanks!'">
         </pre>
         <div class="nextback-container">
             <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
@@ -235,7 +233,7 @@
         <div class="page-text animate-out">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
-                The rest of the tutorial will show you how I used some more <a href="https://webmonetization.org/docs/api">Web Monetization API</a>
+                The rest of the tutorial will show you how I used some more <a href="https://webmonetization.org/docs/api" target="_blank">Web Monetization API</a>
                 features to add a "thank you" note to my site. This "thank you" note is shown to 
                 my visitors who support me through Web Monetization!
                 <br><br>
@@ -252,9 +250,7 @@
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
 <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">html</span><span class="syntax-htmltagpunctuation">&gt;</span>
-<span class="thanks-illustration">
-    <img src="assets/thanks_illustration.svg" alt="Illustration of a blog reader sending money to Auden. Auden says 'thanks!'">
-</span>
+<img class="thanks-illustration" src="assets/thanks_illustration.svg" alt="Illustration of a blog reader sending money to Auden. Auden says 'thanks!'">
         </pre>
         <div class="nextback-container">
             <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
@@ -345,7 +341,7 @@
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 If the <span class="code-font">document.monetization</span> object exists, I can check if a 
-                user has sent money by listening for the <span class="code-font">monetizationprogress</span> event.
+                user has sent money by listening for the <span class="code-font">'<a href="https://webmonetization.org/docs/api#monetizationprogress" target="_blank">monetizationprogress</a>'</span> event. 
                 <br><br>
                 Let’s listen to the event in our script!
             </p>
@@ -536,9 +532,7 @@
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
 <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">html</span><span class="syntax-htmltagpunctuation">&gt;</span>
-<span class="thanks-illustration-blog">
-    <img src="assets/blog_thankyou.svg" alt="Illustration of Auden's blog with a thank you message">
-</span>
+<img class="thanks-illustration-blog" src="assets/blog_thankyou.svg" alt="Illustration of Auden's blog with a thank you message">
 </pre>
         <div class="nextback-container">
             <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
@@ -555,18 +549,15 @@
         <div class="page-text animate-out">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
-                Feel free to copy or download the sample code, 
-                and checkout the <a href="https://github.com/esse-dev/borzoi/" target="_blank">GitHub repository</a>.
+                To get a <strong>payment pointer</strong>, sign up for a 
+                <strong>wallet provider</strong> listed <a href="https://webmonetization.org/docs/ilp-wallets" target="_blank">here</a>.
                 <br><br>
-                To get a <span class="syntax-semibold">payment pointer</span>, sign up for a 
-                <span class="syntax-semibold">wallet provider</span> listed <a href="https://webmonetization.org/docs/ilp-wallets" target="_blank">here</a>.
-                <br><br>
-                If you’re looking to do something further with your Web Monetization code, check out the <span class="syntax-semibold">documentation</span> <a href="https://webmonetization.org/docs/getting-started" target="_blank">here</a>.
+                If you’re looking to do something further with your Web Monetization code, check out the <strong>documentation</strong> <a href="https://webmonetization.org/docs/getting-started" target="_blank">here</a>.
                 <br><br>
                 It’s also great to <a href="https://forum.grantfortheweb.org/" target="_blank">chat with other creators using Web Monetization</a> 
-                and engage in the <span class="syntax-semibold">community</span> around it.
+                and engage in the <strong>community</strong> around it.
                 <br><br>
-                If you run a blog on <span class="syntax-semibold">WordPress</span>, check <a href="https://wordpress.org/plugins/coil-web-monetization/">this</a> out 
+                If you run a blog on <strong>WordPress</strong>, check <a href="https://wordpress.org/plugins/coil-web-monetization/" target="_blank">this</a> out 
                 to enable Web Monetization on your blog!
             </p>
         </div>
@@ -590,12 +581,12 @@
 <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">html</span><span class="syntax-htmltagpunctuation">&gt;</span>
         </pre>
         <div class="getcode-container">
-            <a download href="samples/basic_web_monetization_code.html"><button tabindex="-1">Download</button></a>
+            <a download href="samples/basic_web_monetization_code.html"><button class="utility-button" tabindex="-1">Download</button></a>
             <div class="getcode-copy-container">
                 <img src="assets/copied.svg" class="getcode-copy-feedback-image" id="copied-code-image" alt="Successful copy icon">
-                <button onclick="copyCode()">Copy to Clipboard</button>
+                <button onclick="copyCode()" class="utility-button" tabindex="-1">Copy to Clipboard</button>
             </div>
-            <a href="https://github.com/esse-dev/borzoi" target="_blank"><button tabindex="-1">View on GitHub</button></a>
+            <a href="https://github.com/esse-dev/borzoi" target="_blank"><button class="utility-button" tabindex="-1">View on GitHub</button></a>
         </div>
         <nav class="nextback-container">
             <button onclick="transitionToPreviousPage()" tabindex="-1">← BACK</button>
@@ -603,14 +594,25 @@
         </nav>
     </div>
 
-    <!-- Conclusion/Thank You Page -->
-    <!-- <div>
-        <pre class="code-container animate-in">
-            <img src="assets/polaroid.svg" height="400px" style="float: left;" alt="Illustration of a polaroid photo of Auden and Chicken">
-            <object type="image/svg+xml" data="assets/wm-icon-animated.svg" height="250px" style="float: left;" tabindex="-1"></object>
-        </pre>
-        <button onclick="transitionToPage(0)" class="next-button" tabindex="-1" style="font-size: 14px; padding: 15px 20px;">START AGAIN <span style="font-weight: normal;">↺</span></button>
-    </div> -->
+    <!-- THANK YOU -->
+    <div class="page-container thankyou-page-container">
+        <div class="thankyou-page-text-container">
+            <h1 class="animate-out">Thanks for reading about my <span class="syntax-string">Web Monetization Story</span>!</h1>
+            <p class="animate-out">
+                Hope to see you join the community :)
+            </p>
+            <br>
+            <p class="animate-out" style="font-family: 'Fira Code', monospace;">
+                Gotta go for now...my Chicken is on the loose!
+            </p>
+        </div>
+        <div class="auden-chasing-chicken">
+            <!-- Add animation here -->
+        </div>
+        <nav>
+            <button onclick="transitionToPage(0)" class="utility-button animate-out" tabindex="-1">START AGAIN <span style="font-weight: normal;">↺</span></button>
+        </nav>
+    </div>
 
     <div class="mobile-landing-page">
         <img src="assets/auden.svg" height="100" style="border-radius: 100%;" aria-hidden="true">
@@ -621,11 +623,11 @@
             Or, check out the following links for more information about Web Monetization and this project:
         </p>
         <ul>
-            <li><a href="https://github.com/esse-dev/borzoi" tabindex="-1">This project on GitHub</a></li>
-            <li><a href="https://webmonetization.org/docs/getting-started" tabindex="-1">Getting started with Web Monetization</a></li>
-            <li><a href="https://webmonetization.org/#wallets" tabindex="-1">Web Monetization Wallet Providers</a></li>
-            <li><a href="https://github.com/esse-dev/web-monetization-base/blob/master/simple.html" tabindex="-1">Simple Web Monetization Example Code</a></li>
-            <li><a href="https://forum.grantfortheweb.org/" tabindex="-1">Grant for the Web Community Forum</a></li>
+            <li><a href="https://github.com/esse-dev/borzoi" target="_blank" tabindex="-1">This project on GitHub</a></li>
+            <li><a href="https://webmonetization.org/docs/getting-started" target="_blank" tabindex="-1">Getting started with Web Monetization</a></li>
+            <li><a href="https://webmonetization.org/#wallets" target="_blank" tabindex="-1">Web Monetization Wallet Providers</a></li>
+            <li><a href="https://github.com/esse-dev/web-monetization-base/blob/master/simple.html" target="_blank" tabindex="-1">Simple Web Monetization Example Code</a></li>
+            <li><a href="https://forum.grantfortheweb.org/" target="_blank" tabindex="-1">Grant for the Web Community Forum</a></li>
         </ul>
     </div>
 

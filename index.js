@@ -221,8 +221,12 @@ function showPage(nextPageNum, reverseAnimation = false) {
 
     const navEl = document.getElementsByClassName('nav-dot-container')[0];
 
-    // Hide the navigation element on the landing page
-    navEl.style.opacity = (currentPageNum === 0) ? 0 : 1;
+    // Hide the navigation element on the landing page and the thank you page
+    if (currentPageNum === 0 || currentPageNum === MAX_PAGE_NUM) {
+        navEl.style.opacity = 0;
+    } else {
+        navEl.style.opacity = 1;
+    }
 
     const navDogEl = document.getElementById('nav-dog');
     const navDotWidth = navEl.offsetWidth / navDotEls.length;
