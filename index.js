@@ -95,7 +95,7 @@ for (const missingPuzzleEl of missingPuzzleEls) {
 
 /**
  * Control transitions between pages. The current page is encoded in the URL as an id
- * e.g. https://esse-dev.github.io/borzoi#page-0
+ * e.g. https://esse-dev.github.io/a-web-monetization-story#page-0
  */
 const pageEls = document.getElementsByClassName('page-container');
 let currentPageNum = -1;
@@ -252,7 +252,7 @@ function showPage(nextPageNum, reverseAnimation = false) {
 
 async function copyCode() {
     // Read the basic_web_monetization_code.html file
-    const codeText = await readFile(window.location.origin + '/borzoi/' + 'samples/basic_web_monetization_code.html');
+    const codeText = await readFile(window.location.origin + '/a-web-monetization-story/' + 'samples/basic_web_monetization_code.html');
 
     // Create hidden text area element to hold text, set the value and add it to the body
     const tempTextArea = document.createElement("textarea");

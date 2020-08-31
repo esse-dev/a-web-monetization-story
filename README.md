@@ -1,12 +1,16 @@
 ![Polaroid of Auden and Chicken](assets/preview_1280x640.svg)
 
-# A Web Monetization Story
+# [**A Web Monetization Story**](https://esse-dev.github.io/a-web-monetization-story/)
 An interactive [Web Monetization](https://webmonetization.org/) tutorial for online creators. 
 _Project for the [Betahack "Fix the Internet" Hackathon](https://betahack.devpost.com/) (August 17th-30th, 2020)_
 
-Try it out here: https://esse-dev.github.io/a-web-monetization-story/
+**Try it out here:** https://esse-dev.github.io/a-web-monetization-story/
 
-Demo video: https://youtu.be/EqZIcUXLZgs
+**Demo video:** https://youtu.be/EqZIcUXLZgs
+
+**Devpost submission:** https://devpost.com/software/borzoi
+
+**Drag and Drop Javascript Library:** https://github.com/bevacqua/dragula
 
 ---
 
