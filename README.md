@@ -1,4 +1,4 @@
-![Polaroid of Auden and Chicken](assets/preview_1280x640.svg)
+![Polaroid of Auden and Chicken](assets/preview_1280x640.png)
 
 # [**A Web Monetization Story**](https://esse-dev.github.io/a-web-monetization-story/)
 An interactive [Web Monetization](https://webmonetization.org/) tutorial for online creators. 
