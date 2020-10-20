@@ -207,6 +207,7 @@ a {
     left: 20px;
     position: fixed;
     font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
     color: var(--dark-color);
 }
 .light-footer a:link {
@@ -227,6 +228,7 @@ a {
     left: 20px;
     position: fixed;
     font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
     color: var(--light-color);
 }
 .dark-footer a:link {
