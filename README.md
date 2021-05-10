@@ -5,8 +5,9 @@
 [![Software License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Assets License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-An interactive [Web Monetization](https://webmonetization.org/) tutorial for online creators. 
-_Project for the [Betahack "Fix the Internet" Hackathon](https://betahack.devpost.com/) (August 17th-30th, 2020)_
+An interactive [Web Monetization](https://webmonetization.org/) tutorial for online creators.
+
+_This project was originally created during the [Betahack "Fix the Internet" Hackathon](https://betahack.devpost.com/) (August 17th-30th, 2020) and has since become a subproject within [The Akita Project](https://akitaproject.site/)._
 
 **Try it out here:** https://esse-dev.github.io/a-web-monetization-story/
 
