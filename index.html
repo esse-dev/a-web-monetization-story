@@ -288,13 +288,13 @@
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 I know if a visitor is using Web Monetization if the 
-                <a class="code-font" href="https://webmonetization.org/docs/api#documentmonetization" target="_blank">document.monetization</a> object exists.
+                <a class="code-font" href="https://webmonetization.org/docs/references/monetizationevent/" target="_blank">window.MonetizationEvent</a> object exists.
                 <br><br>
                 Let’s add an empty check in the <span class="code-font">&lt;script&gt;</span> tag to detect the object!
             </p>
         </div>
         <div id="step-2-puzzlepiece-container" class="puzzlepiece-container animate-in">
-            <pre class="puzzle-piece-big">if (document.monetization) {
+            <pre class="puzzle-piece-big">if (window.MonetizationEvent) {
 
 }</pre>
         </div>
@@ -328,7 +328,7 @@
                 I can use this check to customize the website experience if a visitor is using Web Monetization.
                 <br><br>
                 In the next steps, we'll add some simple code inside the 
-                <br><span class="code-font">if (document.monetization) {} </span>check.
+                <br><span class="code-font">if (window.MonetizationEvent) {} </span>check.
             </p>
         </div>
         <pre class="code-container">
@@ -360,14 +360,15 @@
         <div class="page-text">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
-                If the <span class="code-font">document.monetization</span> object exists, I can check if a 
-                user has sent money by listening for the <span class="code-font">'<a href="https://webmonetization.org/docs/api#monetizationprogress" target="_blank">monetizationprogress</a>'</span> event. 
+                If the <span class="code-font">window.MonetizationEvent</span> object exists, I can check if a 
+                user has sent money by listening for the <span class="code-font">'<a href="https://webmonetization.org/docs/references/monetizationevent/" target="_blank">monetizationprogress</a>'</span> event. 
                 <br><br>
                 Let’s listen to the event in our script!
             </p>
         </div>
         <div id="step-3-puzzlepiece-container" class="puzzlepiece-container animate-in">
-            <pre class="puzzle-piece-big">document.monetization.addEventListener('monetizationprogress', event => {
+            <pre class="puzzle-piece-big">const link = document.querySelector('link[rel="monetization"]')
+link.addEventListener('monetization', event => {
 
 });</pre>
         </div>

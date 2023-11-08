@@ -48,7 +48,7 @@ The main Web Monetization concepts introduced in the tutorial include:
 - [Payment Pointer](https://paymentpointers.org/), 
 - [Web Monetization Provider](https://webmonetization.org/docs/sending), 
 - [Web Monetization Wallet](https://webmonetization.org/docs/ilp-wallets), 
-- [`document.monetization` object](https://webmonetization.org/docs/api#documentmonetization), 
+- [`window.MonetizationEvent` object](https://webmonetization.org/docs/references/monetizationevent/), 
 - [`‘monetizationprogress’` event and event listener](https://webmonetization.org/docs/api#monetizationprogress), 
 - showing/hiding content based on whether a visitor is streaming payment to the site through Web Monetization.
 

@@ -5,8 +5,9 @@
 <body>
     <div id="thank-you-note" style="display: none; background-color: #5D67FF; color: #FFF">thank you for supporting me via Web Monetization &lt;3</div>
     <script>
-        if (document.monetization) {
-            document.monetization.addEventListener('monetizationprogress', event => {
+        if (window.MonetizationEvent) {
+            const link = document.querySelector('link[rel="monetization"]');
+            link.addEventListener('monetization', (event) => {
                 document.getElementById('thank-you-note').style.display = 'block';
             })
         }
