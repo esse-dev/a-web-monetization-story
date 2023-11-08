@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/dragula.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.js"></script>
-    <meta name="monetization" content="$ilp.uphold.com/aEYQyH47UYPY">
+    <link rel="monetization" href="$ilp.uphold.com/aEYQyH47UYPY">
     <title>A Web Monetization Story</title>
     <meta name="description" content="An interactive Web Monetization tutorial for online creators">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,7 +51,7 @@
         <img id="nav-dog" src="assets/hapi_boi.svg" aria-hidden="true">
     </nav>
     <footer id="footer" class="light-footer">
-        <a href="https://akitaproject.site/" target="_blank">Made by Sharon and Elliot</a>
+        <a href="https://akitaproject.site/" target="_blank">Project Site</a> | <a target="_blank" href="https://github.com/esse-dev/a-web-monetization-story">GitHub</a>
         <p>
             Content on this site is licensed under a 
             <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International license</a>
@@ -60,6 +60,8 @@
 
     <!-- LANDING PAGE -->
     <div class="page-container dark-page">
+        <div class="victoria-design" style="position:absolute;"> This site is based on the November 8, 2023 version of the <a href="https://webmonetization.org/docs/references/monetizationevent/" style="color:#731245"> Web Monetization Doc</a>.
+        </div>
         <div class="landing-page-avatar-container animate-in animate-out">
             <img src="assets/auden.svg" class="auden-avatar">
         </div>
@@ -181,15 +183,15 @@
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 All I had to do to enable Web Monetization on my site was add the 
-                <a href="https://webmonetization.org/docs/getting-started#3-create-your-meta-tag" target="_blank">monetization meta tag</a> 
-                with my <a href="https://webmonetization.org/docs/ilp-wallets#payment-pointers" target="_blank">payment pointer</a> inside.
+                <a href="https://webmonetization.org/docs/references/html-link-rel-monetization" target="_blank">monetization link tag</a> 
+                with my <a href="https://webmonetization.org/docs/references/html-link-rel-monetization/#payment-pointers" target="_blank">payment pointer</a> inside.
                 <br><br>
-                Try it for yourself :) Drag the <span class="code-font">&lt;meta&gt;</span> tag below into the 
+                Try it for yourself :) Drag the <span class="code-font">&lt;link&gt;</span> tag below into the 
                 <span class="code-font">&lt;head&gt;</span> tag in the html on the right.
             </p>
         </div>
         <div id="step-1-puzzlepiece-container" class="puzzlepiece-container animate-in">
-            <pre class="puzzle-piece">&lt;meta name=&quot;monetization&quot; content=&quot;MY_PAYMENT_POINTER&quot;&gt;</pre>
+            <pre class="puzzle-piece">&lt;link rel=&quot;monetization&quot; href=&quot;MY_PAYMENT_POINTER&quot;&gt;</pre>
         </div>
         <pre class="code-container animate-in">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -218,10 +220,8 @@
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 Now that I've included this single line of code, visitors of my website who use a
-                <strong>Web Monetization Provider</strong> 
-                (such as <a href="https://coil.com/" target="_blank">Coil</a>) 
-                stream money to me. This meta tag is all you need to have a 
-                <strong>Web Monetized site</strong>!
+                <strong>Web Monetization Provider</strong> stream money to me. This <span class="code-font">&lt;link&gt;</span> tag is
+                all you need to have a <strong>Web Monetized site</strong>!
                 <br><br>
                 From here, I added a little Web Monetization feature to my site that I’d like to show you...
             </p>
@@ -229,7 +229,7 @@
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-<span class="animate-in"><span class="syntax-newcode"></span>        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span></span>
+<span class="animate-in"><span class="syntax-newcode"></span>        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span></span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -253,7 +253,7 @@
         <div class="page-text animate-in">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
-                The rest of the tutorial will show you how I used some more <a href="https://webmonetization.org/docs/api" target="_blank">Web Monetization API</a>
+                The rest of the tutorial will show you how I used some more <a href="https://webmonetization.org/docs/references/html-link-rel-monetization/" target="_blank">Web Monetization API</a>
                 features to add a "thank you" note to my site. This "thank you" note is shown to 
                 my visitors who support me through Web Monetization!
                 <br><br>
@@ -263,7 +263,7 @@
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-<span>        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span></span>
+<span>        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span></span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -288,20 +288,20 @@
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 I know if a visitor is using Web Monetization if the 
-                <a class="code-font" href="https://webmonetization.org/docs/api#documentmonetization" target="_blank">document.monetization</a> object exists.
+                <a class="code-font" href="https://webmonetization.org/docs/references/monetizationevent/" target="_blank">window.MonetizationEvent</a> object exists.
                 <br><br>
                 Let’s add an empty check in the <span class="code-font">&lt;script&gt;</span> tag to detect the object!
             </p>
         </div>
         <div id="step-2-puzzlepiece-container" class="puzzlepiece-container animate-in">
-            <pre class="puzzle-piece-big">if (document.monetization) {
+            <pre class="puzzle-piece-big">if (window.MonetizationEvent) {
 
 }</pre>
         </div>
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -328,17 +328,17 @@
                 I can use this check to customize the website experience if a visitor is using Web Monetization.
                 <br><br>
                 In the next steps, we'll add some simple code inside the 
-                <br><span class="code-font">if (document.monetization) {} </span>check.
+                <br><span class="code-font">if (window.MonetizationEvent) {} </span>check.
             </p>
         </div>
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
-<span class="animate-in"><span class="syntax-newcode"></span>            <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">) {</span></span>
+<span class="animate-in"><span class="syntax-newcode"></span>            <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">window</span><span class="syntax-plain">.</span><span class="syntax-variable">MonetizationEvent</span><span class="syntax-plain">) {</span></span>
 <span class="animate-in"><span class="syntax-newcode"></span></span>
 <span class="animate-in"><span class="syntax-newcode"></span>            <span class="syntax-plain">}</span></span>
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -360,25 +360,26 @@
         <div class="page-text">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
-                If the <span class="code-font">document.monetization</span> object exists, I can check if a 
-                user has sent money by listening for the <span class="code-font">'<a href="https://webmonetization.org/docs/api#monetizationprogress" target="_blank">monetizationprogress</a>'</span> event. 
+                If the <span class="code-font">window.MonetizationEvent</span> object exists, I can check if a 
+                user has sent money by listening for the <span class="code-font">'<a href="https://webmonetization.org/docs/references/monetizationevent/" target="_blank">monetization</a>'</span> event on the link element. 
                 <br><br>
                 Let’s listen to the event in our script!
             </p>
         </div>
         <div id="step-3-puzzlepiece-container" class="puzzlepiece-container animate-in">
-            <pre class="puzzle-piece-big">document.monetization.addEventListener('monetizationprogress', event => {
+            <pre class="puzzle-piece-big">const link = document.querySelector('link[rel="monetization"]')
+link.addEventListener('monetization', event => {
 
 });</pre>
         </div>
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
-            <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">) {</span>
+            <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">window</span><span class="syntax-plain">.</span><span class="syntax-variable">MonetizationEvent</span><span class="syntax-plain">) {</span>
                 <div id="step-3-puzzlespot" class="puzzle-piece-big missing animate-in"></div>
             <span class="syntax-plain">}</span>
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -414,12 +415,13 @@
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
-            <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">) {</span>
-<span class="animate-in"><span class="syntax-newcode"></span>                <span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">addEventListener</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;monetizationprogress&#39;</span><span class="syntax-plain">,</span> <span class="syntax-variable">event</span> <span class="syntax-plain">=&gt; {</span></span>
+            <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">window</span><span class="syntax-plain">.</span><span class="syntax-variable">MonetizationEvent</span><span class="syntax-plain">) {</span>
+<span class="animate-in"><span class="syntax-newcode"></span>                <span class="syntax-plain">const</span> <span class="syntax-variable">link</span> = <span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">querySelector</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;link[rel="monetization"]&#39;</span><span class="syntax-plain">);</span></span>
+<span class="animate-in"><span class="syntax-newcode"></span>                <span class="syntax-variable">link</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">addEventListener</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;monetization&#39;</span><span class="syntax-plain">,</span> <span class="syntax-variable">event</span> <span class="syntax-plain">=&gt; {</span></span>
 <span class="animate-in"><span class="syntax-newcode"></span></span>
 <span class="animate-in"><span class="syntax-newcode"></span>                <span class="animate-in"><span class="syntax-plain">});</span></span></span>
             <span class="syntax-plain">}</span>
@@ -456,14 +458,15 @@
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <div id="step-4-part-1-puzzlespot" class="puzzle-piece-big missing animate-in"></div>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
-            <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">) {</span>
-                <span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">addEventListener</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;monetizationprogress&#39;</span><span class="syntax-plain">,</span> <span class="syntax-variable">event</span> <span class="syntax-plain">=&gt; {</span>
-
+            <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">window</span><span class="syntax-plain">.</span><span class="syntax-variable">MonetizationEvent</span><span class="syntax-plain">) {</span>
+                <span class="syntax-plain">const</span> <span class="syntax-variable">link</span> = <span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">querySelector</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;link[rel="monetization"]&#39;</span><span class="syntax-plain">);</span>
+                <span class="syntax-variable">link</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">addEventListener</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;monetization&#39;</span><span class="syntax-plain">,</span> <span class="syntax-variable">event</span> <span class="syntax-plain">=&gt; {</span>
+                <span class="syntax-plain"></span>
                 <span class="syntax-plain">});</span>
             <span class="syntax-plain">}</span>
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -488,7 +491,7 @@
                 If a visitor has sent payment, we want to let them know it's appreciated!
                 <br><br>
                 Let’s show the <span class="code-font">&lt;div&gt;</span> containing
-                the note in the <span class="code-font">monetizationprogress</span> event handler.
+                the note in the <span class="code-font">monetization</span> event handler.
             </p>
         </div>
         <div id="step-4-part-2-puzzlepiece-container" class="puzzlepiece-container">
@@ -497,15 +500,16 @@
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
 <span class="animate-in"><span class="syntax-newcode"></span>        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">div</span> <span class="syntax-variable">id</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;thank-you-note&quot;</span> <span class="syntax-variable">style</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;display: none;&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span></span>
 <span class="animate-in"><span class="syntax-newcode"></span>            <span class="syntax-plain">Thank you for supporting me via Web Monetization &lt;3</span></span>
 <span class="animate-in"><span class="syntax-newcode"></span>        <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">div</span><span class="syntax-htmltagpunctuation">&gt;</span></span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
-            <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">) {</span>
-                <span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">addEventListener</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;monetizationprogress&#39;</span><span class="syntax-plain">,</span> <span class="syntax-variable">event</span> <span class="syntax-plain">=&gt; {</span>
+            <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">window</span><span class="syntax-plain">.</span><span class="syntax-variable">MonetizationEvent</span><span class="syntax-plain">) {</span>
+                <span class="syntax-plain">const</span> <span class="syntax-variable">link</span> = <span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">querySelector</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;link[rel="monetization"]&#39;</span><span class="syntax-plain">);</span>
+                <span class="syntax-variable">link</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">addEventListener</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;monetization&#39;</span><span class="syntax-plain">,</span> <span class="syntax-variable">event</span> <span class="syntax-plain">=&gt; {</span>
                     <div id="step-4-part-2-puzzlespot" class="puzzle-piece missing animate-in"></div>
                 <span class="syntax-plain">});</span>
             <span class="syntax-plain">}</span>
@@ -537,15 +541,16 @@
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">div</span> <span class="syntax-variable">id</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;thank-you-note&quot;</span> <span class="syntax-variable">style</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;display: none;&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
             <span class="syntax-plain">Thank you for supporting me via Web Monetization &lt;3</span>
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">div</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
-            <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">) {</span>
-                <span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">addEventListener</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;monetizationprogress&#39;</span><span class="syntax-plain">,</span> <span class="syntax-variable">event</span> <span class="syntax-plain">=&gt; {</span>
+            <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">window</span><span class="syntax-plain">.</span><span class="syntax-variable">MonetizationEvent</span><span class="syntax-plain">) {</span>
+                <span class="syntax-plain">const</span> <span class="syntax-variable">link</span> = <span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">querySelector</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;link[rel="monetization"]&#39;</span><span class="syntax-plain">);</span>
+                <span class="syntax-variable">link</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">addEventListener</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;monetization&#39;</span><span class="syntax-plain">,</span> <span class="syntax-variable">event</span> <span class="syntax-plain">=&gt; {</span>
 <span class="animate-in"><span class="syntax-newcode"></span>                    <span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">getElementById</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;thank-you-note&#39;</span><span class="syntax-plain">).</span><span class="syntax-variable">style</span><span class="syntax-plain">.</span><span class="syntax-variable">display</span> <span class="syntax-plain">=</span> <span class="syntax-string">&#39;block&#39;</span><span class="syntax-plain">;</span></span>
                 <span class="syntax-plain">});</span>
             <span class="syntax-plain">}</span>
@@ -569,33 +574,31 @@
         <div class="page-text animate-out">
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
-                To get a <strong>payment pointer</strong>, sign up for a 
-                <strong>wallet provider</strong> listed <a href="https://webmonetization.org/docs/ilp-wallets" target="_blank">here</a>.
+                To get a <strong>payment pointer</strong>, sign up for a
+                <strong>Web Monetization Wallet</strong> listed <a href="https://webmonetization.org/" target="_blank">here</a>.
                 <br><br>
-                If you’re looking to do something further with your Web Monetization code, check out the <strong>documentation</strong> <a href="https://webmonetization.org/docs/getting-started" target="_blank">here</a>.
+                If you’re looking to do something further with your Web Monetization code (like <a href="https://webmonetization.org/docs/guides/monetize-page/#multiple-monetization-links" target="_blank">Multiple Monetization Links</a>)
+                check out the <strong>documentation</strong> <a href="https://webmonetization.org/docs/" target="_blank">here</a>.
                 <br><br>
-                It’s also great to <a href="https://community.interledger.org/" target="_blank">chat with other creators in the Interledger Community</a> 
-                and engage in the <strong>community</strong> around it.
-                <br><br>
-                If you run a blog on <strong>WordPress</strong>, check <a href="https://wordpress.org/plugins/coil-web-monetization/" target="_blank">this</a> out 
-                to enable Web Monetization on your blog!
+                Don't forget to hang out with other creators in the <a href="https://community.interledger.org/" target="_blank">Interledger Community</a> and chat with community on <a href="https://communityinviter.com/apps/interledger/interledger-working-groups-slack" target="_blank">Slack</a>!
             </p>
         </div>
         <pre class="code-container animate-out">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">div</span> <span class="syntax-variable">id</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;thank-you-note&quot;</span> <span class="syntax-variable">style</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;display: none;&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
             <span class="syntax-plain">Thank you for supporting me via Web Monetization &lt;3</span>
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">div</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
-            <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">) {</span>
-                <span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-variable">monetization</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">addEventListener</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;monetizationprogress&#39;</span><span class="syntax-plain">,</span> <span class="syntax-variable">event</span> <span class="syntax-plain">=&gt; {</span>
+            <span class="syntax-functionorcontrol">if</span> <span class="syntax-plain">(</span><span class="syntax-variable">window</span><span class="syntax-plain">.</span><span class="syntax-variable">MonetizationEvent</span><span class="syntax-plain">) {</span>
+                <span class="syntax-plain">const</span> <span class="syntax-variable">link</span> = <span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">querySelector</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;link[rel="monetization"]&#39;</span><span class="syntax-plain">);</span>
+                <span class="syntax-variable">link</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">addEventListener</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;monetization&#39;</span><span class="syntax-plain">,</span> <span class="syntax-variable">event</span> <span class="syntax-plain">=&gt; {</span>
                     <span class="syntax-variable">document</span><span class="syntax-plain">.</span><span class="syntax-functionorcontrol">getElementById</span><span class="syntax-plain">(</span><span class="syntax-string">&#39;thank-you-note&#39;</span><span class="syntax-plain">).</span><span class="syntax-variable">style</span><span class="syntax-plain">.</span><span class="syntax-variable">display</span> <span class="syntax-plain">=</span> <span class="syntax-string">&#39;block&#39;</span><span class="syntax-plain">;</span>
                 <span class="syntax-plain">});</span>
-            <span class="syntax-plain">}</span>
+            <span class="syntax-plain">}</span>                   
         <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
 <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">html</span><span class="syntax-htmltagpunctuation">&gt;</span>

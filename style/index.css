@@ -270,6 +270,19 @@ a {
     border-radius: 100%;
 }
 
+.victoria-design {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin:0 auto;
+    width: calc(100% - 28px);
+    font-size: 12px;
+    height: 23px;
+    cursor: pointer;
+    background-color:#FFB566; 
+    color:#731245;
+    text-align: center;
+    padding-top: 5px;
+}
+
 /* Button styling*/
 button {
     padding: 15px 35px;

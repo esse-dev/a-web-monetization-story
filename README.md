@@ -40,16 +40,16 @@ by a user into the sample website html provided. Auden provides personal anecdot
 enabling Web Monetization on their site, as well as context and reasoning for simple code that is added. 
 The tutorial starts off with the basics needed to enable Web Monetization (adding the monetization meta 
 tag) and progresses into a further example on how to customize a visitor’s experience on the site using 
-the [Web Monetization JavaScript API](https://webmonetization.org/docs/api) (showing a “thank you” note 
+the [Web Monetization JavaScript API](https://webmonetization.org/docs/references/html-link-rel-monetization/) (showing a “thank you” note 
 to visitors supporting the site via Web Monetization).
 
 The main Web Monetization concepts introduced in the tutorial include: 
-- [monetization `<meta>` tag](https://webmonetization.org/docs/getting-started#3-create-your-meta-tag), 
+- [monetization `<link>` tag](https://webmonetization.org/docs/references/html-link-rel-monetization/), 
 - [Payment Pointer](https://paymentpointers.org/), 
 - [Web Monetization Provider](https://webmonetization.org/docs/sending), 
 - [Web Monetization Wallet](https://webmonetization.org/docs/ilp-wallets), 
-- [`document.monetization` object](https://webmonetization.org/docs/api#documentmonetization), 
-- [`‘monetizationprogress’` event and event listener](https://webmonetization.org/docs/api#monetizationprogress), 
+- [`window.MonetizationEvent` object](https://webmonetization.org/docs/references/monetizationevent/), 
+- [`monetization` event and event listener](https://webmonetization.org/docs/references/attributes/amountsent/), 
 - showing/hiding content based on whether a visitor is streaming payment to the site through Web Monetization.
 
 At the end of the tutorial, Auden presents a handful of resources that a user can leverage to continue on 
