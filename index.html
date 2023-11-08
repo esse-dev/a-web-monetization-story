@@ -359,7 +359,7 @@
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 If the <span class="code-font">window.MonetizationEvent</span> object exists, I can check if a 
-                user has sent money by listening for the <span class="code-font">'<a href="https://webmonetization.org/docs/references/attributes/amountsent/" target="_blank">monetization</a>'</span> event. 
+                user has sent money by listening for the <span class="code-font">'<a href="https://webmonetization.org/docs/references/attributes/amountsent/" target="_blank">monetization</a>'</span> event on the link element. 
                 <br><br>
                 Let’s listen to the event in our script!
             </p>
@@ -489,7 +489,7 @@ link.addEventListener('monetization', event => {
                 If a visitor has sent payment, we want to let them know it's appreciated!
                 <br><br>
                 Let’s show the <span class="code-font">&lt;div&gt;</span> containing
-                the note in the <span class="code-font">monetizationprogress</span> event handler.
+                the note in the <span class="code-font">monetization</span> event handler.
             </p>
         </div>
         <div id="step-4-part-2-puzzlepiece-container" class="puzzlepiece-container">
