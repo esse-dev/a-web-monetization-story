@@ -44,7 +44,7 @@ the [Web Monetization JavaScript API](https://webmonetization.org/docs/api) (sho
 to visitors supporting the site via Web Monetization).
 
 The main Web Monetization concepts introduced in the tutorial include: 
-- [monetization `<meta>` tag](https://webmonetization.org/docs/getting-started#3-create-your-meta-tag), 
+- [monetization `<link>` tag](https://webmonetization.org/docs/references/html-link-rel-monetization/), 
 - [Payment Pointer](https://paymentpointers.org/), 
 - [Web Monetization Provider](https://webmonetization.org/docs/sending), 
 - [Web Monetization Wallet](https://webmonetization.org/docs/ilp-wallets), 

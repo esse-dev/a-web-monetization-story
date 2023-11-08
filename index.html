@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/dragula.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.js"></script>
-    <meta name="monetization" content="$ilp.uphold.com/aEYQyH47UYPY">
+    <link rel="monetization" href="$ilp.uphold.com/aEYQyH47UYPY">
     <title>A Web Monetization Story</title>
     <meta name="description" content="An interactive Web Monetization tutorial for online creators">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -181,15 +181,15 @@
             <img src="assets/speech_triangle.svg" class="speech-bubble-stem" aria-hidden="true">
             <p>
                 All I had to do to enable Web Monetization on my site was add the 
-                <a href="https://webmonetization.org/docs/getting-started#3-create-your-meta-tag" target="_blank">monetization meta tag</a> 
-                with my <a href="https://webmonetization.org/docs/ilp-wallets#payment-pointers" target="_blank">payment pointer</a> inside.
+                <a href="https://webmonetization.org/docs/references/html-link-rel-monetization" target="_blank">monetization link tag</a> 
+                with my <a href="https://webmonetization.org/docs/resources/paymentpointers" target="_blank">payment pointer</a> inside.
                 <br><br>
-                Try it for yourself :) Drag the <span class="code-font">&lt;meta&gt;</span> tag below into the 
+                Try it for yourself :) Drag the <span class="code-font">&lt;link&gt;</span> tag below into the 
                 <span class="code-font">&lt;head&gt;</span> tag in the html on the right.
             </p>
         </div>
         <div id="step-1-puzzlepiece-container" class="puzzlepiece-container animate-in">
-            <pre class="puzzle-piece">&lt;meta name=&quot;monetization&quot; content=&quot;MY_PAYMENT_POINTER&quot;&gt;</pre>
+            <pre class="puzzle-piece">&lt;link rel=&quot;monetization&quot; href=&quot;MY_PAYMENT_POINTER&quot;&gt;</pre>
         </div>
         <pre class="code-container animate-in">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -229,7 +229,7 @@
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-<span class="animate-in"><span class="syntax-newcode"></span>        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span></span>
+<span class="animate-in"><span class="syntax-newcode"></span>        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span></span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -263,7 +263,7 @@
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-<span>        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span></span>
+<span>        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span></span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -301,7 +301,7 @@
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -334,7 +334,7 @@
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -375,7 +375,7 @@ link.addEventListener('monetization', event => {
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -415,7 +415,7 @@ link.addEventListener('monetization', event => {
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">script</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -457,7 +457,7 @@ link.addEventListener('monetization', event => {
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <div id="step-4-part-1-puzzlespot" class="puzzle-piece-big missing animate-in"></div>
@@ -498,7 +498,7 @@ link.addEventListener('monetization', event => {
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
 <span class="animate-in"><span class="syntax-newcode"></span>        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">div</span> <span class="syntax-variable">id</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;thank-you-note&quot;</span> <span class="syntax-variable">style</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;display: none;&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span></span>
@@ -538,7 +538,7 @@ link.addEventListener('monetization', event => {
         <pre class="code-container">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">div</span> <span class="syntax-variable">id</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;thank-you-note&quot;</span> <span class="syntax-variable">style</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;display: none;&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
@@ -585,7 +585,7 @@ link.addEventListener('monetization', event => {
         <pre class="code-container animate-out">
 <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">html</span> <span class="syntax-variable">lang</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;en&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
-        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">meta</span> <span class="syntax-variable">name</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">content</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
+        <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">link</span> <span class="syntax-variable">rel</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;monetization&quot;</span> <span class="syntax-variable">href</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;MY_PAYMENT_POINTER&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;/</span><span class="syntax-htmltag">head</span><span class="syntax-htmltagpunctuation">&gt;</span>
     <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">body</span><span class="syntax-htmltagpunctuation">&gt;</span>
         <span class="syntax-htmltagpunctuation">&lt;</span><span class="syntax-htmltag">div</span> <span class="syntax-variable">id</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;thank-you-note&quot;</span> <span class="syntax-variable">style</span><span class="syntax-plain">=</span><span class="syntax-string">&quot;display: none;&quot;</span><span class="syntax-htmltagpunctuation">&gt;</span>
