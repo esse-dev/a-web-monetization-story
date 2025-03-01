@@ -7,7 +7,7 @@
 
 An interactive [Web Monetization](https://webmonetization.org/) tutorial for online creators.
 
-_This project was originally created during the [Betahack "Fix the Internet" Hackathon](https://betahack.devpost.com/) (August 17th-30th, 2020) and has since become a subproject within [The Akita Project](https://akitaproject.site/)._
+_This project was originally created during the [Betahack "Fix the Internet" Hackathon](https://betahack.devpost.com/) (August 17th-30th, 2020) and has since become a subproject within [The Akita Project](https://esse-dev.github.io/akita-project-site)._
 
 **Try it out here:** https://esse-dev.github.io/a-web-monetization-story/
 
